@@ -108,9 +108,9 @@ export const SITE_CONFIG = {
   links: {
     membership: "https://www.club-tesla.fr/site/Devenir_membre-7401",
     events: "https://events.club-tesla.fr/events",
-    facebook: "https://www.facebook.com/TeslaOwnersClubFrance",
-    instagram: "https://www.instagram.com/teslaownersclubfrance/",
-    youtube: "https://www.youtube.com/c/TeslaOwnersClubFrance",
+    facebook: "https://www.facebook.com/groups/clubteslafrance/",
+    instagram: "https://www.instagram.com/teslaclubfrance/",
+    youtube: "https://www.youtube.com/channel/UC_S5Lpq9lYrn2rXLMd_ryTw",
     twitter: "https://x.com/TeslaClubFrance",
   },
   contact: {
