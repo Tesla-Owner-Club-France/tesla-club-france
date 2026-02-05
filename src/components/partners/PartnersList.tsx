@@ -21,6 +21,7 @@ export function PartnersList({ partners, selectedPartnerId, onPartnerSelect }: P
       </div>
     );
   }
+  console.log(partners);
 
   return (
     <div className="bg-white rounded-xl border border-border overflow-hidden">
