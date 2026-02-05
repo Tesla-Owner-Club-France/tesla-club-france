@@ -2,17 +2,20 @@ import Link from "next/link";
 import { Container } from "@/components/ui";
 import { SITE_CONFIG } from "@/types";
 
+// Base URL du site principal
+const MAIN_SITE_URL = ".club-tesla.fr";
+
 const footerNavigation = {
   main: [
-    { name: "Partenaires", href: "/partenaires" },
-    { name: "Actualités", href: "/actualites" },
-    { name: "Adhésion", href: "/adhesion" },
-    { name: "Contact", href: "/contact" },
+    { name: "Partenaires", href: "/", external: false },
+    { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70`, external: true },
+    { name: "Adhésion", href: `https://www.${MAIN_SITE_URL}/site/Devenir_membre-7401`, external: true },
+    { name: "Contact", href: `https://www.${MAIN_SITE_URL}/site/Contact-69`, external: true },
   ],
-  legal: [
-    { name: "Mentions légales", href: "/mentions-legales" },
-    { name: "Politique de confidentialité", href: "/confidentialite" },
-  ],
+  // legal: [
+  //   { name: "Mentions légales", href: `${MAIN_SITE_URL}/mentions-legales/`, external: true },
+  //   { name: "Politique de confidentialité", href: `${MAIN_SITE_URL}/confidentialite/`, external: true },
+  // ],
   social: [
     {
       name: "Facebook",
@@ -97,12 +100,23 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerNavigation.main.map((item) => (
                   <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-sm text-white/70 hover:text-white transition-colors"
-                    >
-                      {item.name}
-                    </Link>
+                    {item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-white/70 hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-sm text-white/70 hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -132,17 +146,29 @@ export function Footer() {
             <p className="text-sm text-white/50">
               © {currentYear} {SITE_CONFIG.name}. Tous droits réservés.
             </p>
-            <div className="flex gap-6">
+            {/* <div className="flex gap-6">
               {footerNavigation.legal.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm text-white/50 hover:text-white/80 transition-colors"
-                >
-                  {item.name}
-                </Link>
+                item.external ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white/50 hover:text-white/80 transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm text-white/50 hover:text-white/80 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>

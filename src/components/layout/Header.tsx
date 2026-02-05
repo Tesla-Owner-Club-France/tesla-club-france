@@ -7,12 +7,17 @@ import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui";
 import { SITE_CONFIG } from "@/types";
 
+// Base URL du site principal
+const MAIN_SITE_URL = "club-tesla.fr";
+
 const navigation = [
-  { name: "Accueil", href: "/" },
-  { name: "Partenaires", href: "/partenaires" },
-  { name: "Actualités", href: "/actualites" },
-  { name: "Adhésion", href: "/adhesion" },
-  { name: "Événements", href: SITE_CONFIG.links.events, external: true },
+  { name: "Accueil", href: `https://www.${MAIN_SITE_URL}/site/`, external: true },
+  { name: "Le Club", href: `https://www.${MAIN_SITE_URL}/site/Le_Club-54/`, external: true },
+  { name: "Partenaires", href: "/" },
+  { name: "Événements", href: `https://events.${MAIN_SITE_URL}/events`, external: true },
+  { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70/`, external: true },
+  { name: "Forum", href: `https://community.${MAIN_SITE_URL}/`, external: true },
+  { name: "Contact", href: `https://www.${MAIN_SITE_URL}/site/Contact-69`, external: true },
 ];
 
 export function Header() {
@@ -23,8 +28,8 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <Container>
         <nav className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          {/* Logo - pointe vers le site principal */}
+          <a href={MAIN_SITE_URL} className="flex items-center gap-3 group">
             <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg lg:text-xl">T</span>
             </div>
@@ -34,7 +39,7 @@ export function Header() {
               </p>
               <p className="text-text-muted text-xs lg:text-sm">France</p>
             </div>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">

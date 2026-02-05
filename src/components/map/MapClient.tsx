@@ -91,9 +91,15 @@ export function MapClient({ partners, onPartnerSelect, selectedPartnerId }: MapC
     markersRef.current.forEach((marker) => marker.remove());
     markersRef.current = [];
 
-    // Add new markers
-    partners.forEach((partner) => {
-      const marker = L.marker([partner.latitude, partner.longitude], {
+    // Filter partners with valid coordinates
+    const partnersWithCoords = partners.filter(
+      (p) => p.latitude !== undefined && p.longitude !== undefined && 
+             !isNaN(p.latitude) && !isNaN(p.longitude)
+    );
+
+    // Add new markers only for partners with coordinates
+    partnersWithCoords.forEach((partner) => {
+      const marker = L.marker([partner.latitude!, partner.longitude!], {
         icon: teslaIcon,
         title: partner.name,
       });
@@ -106,26 +112,17 @@ export function MapClient({ partners, onPartnerSelect, selectedPartnerId }: MapC
       markersRef.current.push(marker);
     });
 
-    // Fit bounds if we have partners
-    if (partners.length > 0) {
+    // Fit bounds if we have partners with coordinates
+    if (partnersWithCoords.length > 0) {
       const bounds = L.latLngBounds(
-        partners.map((p) => [p.latitude, p.longitude] as [number, number])
+        partnersWithCoords.map((p) => [p.latitude!, p.longitude!] as [number, number])
       );
       mapRef.current.fitBounds(bounds, { padding: [50, 50], maxZoom: 10 });
     }
   }, [partners, onPartnerSelect]);
 
-  // Highlight selected marker
-  useEffect(() => {
-    if (!mapRef.current || !selectedPartnerId) return;
-
-    const partner = partners.find((p) => p.id === selectedPartnerId);
-    if (partner) {
-      mapRef.current.setView([partner.latitude, partner.longitude], 12, {
-        animate: true,
-      });
-    }
-  }, [selectedPartnerId, partners]);
+  // Note: On ne zoome plus automatiquement sur le partenaire sélectionné
+  // pour permettre à l'utilisateur de continuer à explorer la carte
 
   return (
     <div
