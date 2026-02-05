@@ -1,15 +1,15 @@
 services:
-  web-dev:
+  web:
     image: partenaires-web-dev
     build:
       context: .
       target: deps
     working_dir: /app
-    command: npm run dev
+    command: npm start
     ports:
       - "${PORT_WEB:-3000}:3000"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=prod
     volumes:
       - .:/app
       - /app/node_modules
