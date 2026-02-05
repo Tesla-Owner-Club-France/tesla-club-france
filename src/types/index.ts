@@ -69,12 +69,12 @@ export const SITE_CONFIG = {
     "Le club officiel des propriétaires Tesla en France. Rejoignez la communauté, trouvez des partenaires certifiés et participez à des événements exclusifs.",
   url: "https://www.club-tesla.fr",
   links: {
-    membership: "https://www.club-tesla.fr/site/devenir-membre/",
-    events: "https://www.club-tesla.fr/site/evenements/",
+    membership: "https://www.club-tesla.fr/site/Devenir_membre-7401",
+    events: "https://events.club-tesla.fr/events",
     facebook: "https://www.facebook.com/TeslaOwnersClubFrance",
     instagram: "https://www.instagram.com/teslaownersclubfrance/",
     youtube: "https://www.youtube.com/c/TeslaOwnersClubFrance",
-    twitter: "https://twitter.com/TOC_France",
+    twitter: "https://x.com/TeslaClubFrance",
   },
   contact: {
     email: "contact@club-tesla.fr",

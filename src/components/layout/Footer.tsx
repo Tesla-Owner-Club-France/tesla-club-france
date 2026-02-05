@@ -3,19 +3,19 @@ import { Container } from "@/components/ui";
 import { SITE_CONFIG } from "@/types";
 
 // Base URL du site principal
-const MAIN_SITE_URL = "https://www.club-tesla.fr/site";
+const MAIN_SITE_URL = ".club-tesla.fr";
 
 const footerNavigation = {
   main: [
     { name: "Partenaires", href: "/", external: false },
-    { name: "Actualités", href: `${MAIN_SITE_URL}/actualites/`, external: true },
-    { name: "Adhésion", href: `${MAIN_SITE_URL}/devenir-membre/`, external: true },
-    { name: "Contact", href: `${MAIN_SITE_URL}/contact/`, external: true },
+    { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70`, external: true },
+    { name: "Adhésion", href: `https://www.${MAIN_SITE_URL}/site/Devenir_membre-7401`, external: true },
+    { name: "Contact", href: `https://www.${MAIN_SITE_URL}/site/Contact-69`, external: true },
   ],
-  legal: [
-    { name: "Mentions légales", href: `${MAIN_SITE_URL}/mentions-legales/`, external: true },
-    { name: "Politique de confidentialité", href: `${MAIN_SITE_URL}/confidentialite/`, external: true },
-  ],
+  // legal: [
+  //   { name: "Mentions légales", href: `${MAIN_SITE_URL}/mentions-legales/`, external: true },
+  //   { name: "Politique de confidentialité", href: `${MAIN_SITE_URL}/confidentialite/`, external: true },
+  // ],
   social: [
     {
       name: "Facebook",

@@ -8,16 +8,16 @@ import { Container } from "@/components/ui";
 import { SITE_CONFIG } from "@/types";
 
 // Base URL du site principal
-const MAIN_SITE_URL = "https://www.club-tesla.fr/site";
+const MAIN_SITE_URL = "club-tesla.fr";
 
 const navigation = [
-  { name: "Accueil", href: MAIN_SITE_URL, external: true },
-  { name: "Le Club", href: `${MAIN_SITE_URL}/a-propos/`, external: true },
+  { name: "Accueil", href: `https://www.${MAIN_SITE_URL}/site/`, external: true },
+  { name: "Le Club", href: `https://www.${MAIN_SITE_URL}/site/Le_Club-54/`, external: true },
   { name: "Partenaires", href: "/" },
-  { name: "Événements", href: `${MAIN_SITE_URL}/evenements/`, external: true },
-  { name: "Actualités", href: `${MAIN_SITE_URL}/actualites/`, external: true },
-  { name: "Forum", href: `${MAIN_SITE_URL}/forum/`, external: true },
-  { name: "Contact", href: `${MAIN_SITE_URL}/contact/`, external: true },
+  { name: "Événements", href: `https://events.${MAIN_SITE_URL}/events`, external: true },
+  { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70/`, external: true },
+  { name: "Forum", href: `https://community.${MAIN_SITE_URL}/`, external: true },
+  { name: "Contact", href: `https://www.${MAIN_SITE_URL}/site/Contact-69`, external: true },
 ];
 
 export function Header() {
