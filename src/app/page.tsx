@@ -6,6 +6,7 @@ import { Map } from "@/components/map";
 import { CategoryFilters, PartnersList, PartnerDetail } from "@/components/partners";
 import { getPartners, getActiveCategories } from "@/lib/data/partners";
 import type { Partner, CategoryType } from "@/types";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function HomePage() {
   // State
@@ -148,6 +149,8 @@ export default function HomePage() {
           />
         )}
       </Drawer>
+
+      <Analytics />
     </div>
   );
 }
