@@ -12,10 +12,10 @@ const MAIN_SITE_URL = "club-tesla.fr";
 
 const navigation = [
   { name: "Accueil", href: `https://www.${MAIN_SITE_URL}/site/`, external: true },
-  { name: "Le Club", href: `https://www.${MAIN_SITE_URL}/site/Le_Club-54/`, external: true },
+  { name: "Le Club", href: `https://www.${MAIN_SITE_URL}/site/Le_Club-54`, external: true },
   { name: "Partenaires", href: "/" },
   { name: "Événements", href: `https://events.${MAIN_SITE_URL}/events`, external: true },
-  { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70/`, external: true },
+  { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70`, external: true },
   { name: "Forum", href: `https://community.${MAIN_SITE_URL}/`, external: true },
   { name: "Contact", href: `https://www.${MAIN_SITE_URL}/site/Contact-69`, external: true },
 ];
