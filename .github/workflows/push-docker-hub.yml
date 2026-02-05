@@ -1,0 +1,53 @@
+# Ce workflow utilise des actions qui ne sont pas certifiées par GitHub.
+# Elles sont fournies par un tiers et régies par
+# des conditions d’utilisation du service, une politique de confidentialité et un support distincts.
+# documentation en ligne.
+
+# GitHub recommande d’épingler les actions à un SHA de commit.
+# Pour obtenir une version plus récente, vous devez mettre à jour le SHA.
+# Vous pouvez également référencer une balise ou une branche, mais l’action peut changer sans avertissement.
+
+name: Publish Docker image
+
+on:
+  release:
+    types: [published]
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Add SSH private key to agent
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # Ensure this secret contains the new private key
+
+      - name: Copy files to VPS
+        env:
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          APP_DIR: ${{ secrets.APP_DIR }}
+        run: |
+          rsync -avz --delete ./ $SERVER_USER@$SERVER_IP:$APP_DIR
+
+      - name: Deploy to Server
+        env:
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          APP_DIR: ${{ secrets.APP_DIR }}
+          APP_PORT: 3000
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SERVER_USER@$SERVER_IP "
+          cd $APP_DIR &&
+          echo PORT_WEB=$APP_PORT > $APP_DIR/.env &&
+          docker compose -f compose-deploy.yaml up --build --always-recreate-deps
+          "
