@@ -1,16 +1,25 @@
 // ===== PARTNER TYPES =====
 
-export type ServiceType =
-  | "charging" // Recharge
-  | "maintenance" // Entretien
-  | "bodywork" // Carrosserie
-  | "tires" // Pneumatiques
-  | "glass" // Vitrage
-  | "accessories" // Accessoires
-  | "insurance" // Assurance
-  | "leasing" // Leasing
-  | "rental" // Location
-  | "sales"; // Vente VO
+// Catégories basées sur les données réelles du fichier partners.json
+export type CategoryType =
+  | "detailing"
+  | "tourisme"
+  | "recharge"
+  | "garage"
+  | "jantes"
+  | "accessoires"
+  | "pneumatique"
+  | "controle-technique"
+  | "transfert"
+  | "photovoltaique"
+  | "assurance"
+  | "carrosserie"
+  | "pilotage"
+  | "energie"
+  | "auto-ecole"
+  | "location"
+  | "convoyage"
+  | "leasing";
 
 export interface Partner {
   id: string;
@@ -18,15 +27,17 @@ export interface Partner {
   address: string;
   city: string;
   postalCode: string;
-  latitude: number;
-  longitude: number;
+  country: string;
   phone?: string;
-  email?: string;
   website?: string;
-  services: ServiceType[];
-  description?: string;
-  logoUrl?: string;
-  active: boolean;
+  category: CategoryType;
+  categoryLabel: string; // Label original du JSON
+  membersBenefits?: string;
+  benefitsConditions?: string;
+  hasLogo: boolean;
+  // Coordonnées pour la carte (à géocoder plus tard)
+  latitude?: number;
+  longitude?: number;
 }
 
 // ===== NEWS TYPES =====
@@ -40,26 +51,52 @@ export interface NewsArticle {
   content: string;
 }
 
-// ===== SERVICE METADATA =====
+// ===== CATEGORY METADATA =====
 
-export interface ServiceMeta {
-  code: ServiceType;
+export interface CategoryMeta {
+  code: CategoryType;
   label: string;
   icon: string;
+  aliases: string[]; // Pour mapper les labels du JSON
 }
 
-export const SERVICES: ServiceMeta[] = [
-  { code: "charging", label: "Recharge", icon: "⚡" },
-  { code: "maintenance", label: "Entretien", icon: "🔧" },
-  { code: "bodywork", label: "Carrosserie", icon: "🚗" },
-  { code: "tires", label: "Pneumatiques", icon: "🛞" },
-  { code: "glass", label: "Vitrage", icon: "🪟" },
-  { code: "accessories", label: "Accessoires", icon: "🎨" },
-  { code: "insurance", label: "Assurance", icon: "🛡️" },
-  { code: "leasing", label: "Leasing", icon: "💳" },
-  { code: "rental", label: "Location", icon: "🔑" },
-  { code: "sales", label: "Vente VO", icon: "🏷️" },
+export const CATEGORIES: CategoryMeta[] = [
+  { code: "detailing", label: "Detailing", icon: "✨", aliases: ["Detailing"] },
+  { code: "tourisme", label: "Tourisme", icon: "🏨", aliases: ["Tourisme"] },
+  { code: "recharge", label: "Recharge", icon: "⚡", aliases: ["Recharge"] },
+  { code: "garage", label: "Garage", icon: "🔧", aliases: ["Garage"] },
+  { code: "jantes", label: "Réparation jantes", icon: "🛞", aliases: ["Réparation jantes"] },
+  { code: "accessoires", label: "Accessoires", icon: "🎨", aliases: ["Accessoires auto"] },
+  { code: "pneumatique", label: "Pneumatique", icon: "🚗", aliases: ["Pneumatique"] },
+  { code: "controle-technique", label: "Contrôle technique", icon: "📋", aliases: ["Contrôle technique"] },
+  { code: "transfert", label: "Transfert", icon: "🚐", aliases: ["Transfert"] },
+  { code: "photovoltaique", label: "Photovoltaïque", icon: "☀️", aliases: ["Photovoltaique"] },
+  { code: "assurance", label: "Assurance", icon: "🛡️", aliases: ["Assurance auto", "Assurance"] },
+  { code: "carrosserie", label: "Carrosserie", icon: "🚙", aliases: ["Carrosserie"] },
+  { code: "pilotage", label: "Stage pilotage", icon: "🏎️", aliases: ["Pilotage", "Stage de pilotage"] },
+  { code: "energie", label: "Économie d'énergie", icon: "💡", aliases: ["Economie d'énergie"] },
+  { code: "auto-ecole", label: "Auto-école", icon: "🎓", aliases: ["Auto-école"] },
+  { code: "location", label: "Location", icon: "🔑", aliases: ["Location de voiture", "Location voiture"] },
+  { code: "convoyage", label: "Convoyage", icon: "🚚", aliases: ["Convoyage de Véhicule"] },
+  { code: "leasing", label: "Leasing", icon: "💳", aliases: ["Leasing"] },
 ];
+
+/**
+ * Trouve le code de catégorie à partir du label du JSON
+ */
+export function getCategoryCode(label: string): CategoryType {
+  const category = CATEGORIES.find((c) =>
+    c.aliases.some((alias) => alias.toLowerCase() === label.toLowerCase())
+  );
+  return category?.code ?? "garage"; // Fallback sur garage si non trouvé
+}
+
+/**
+ * Trouve les métadonnées d'une catégorie par son code
+ */
+export function getCategoryMeta(code: CategoryType): CategoryMeta | undefined {
+  return CATEGORIES.find((c) => c.code === code);
+}
 
 // ===== SITE CONFIG =====
 

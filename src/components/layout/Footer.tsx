@@ -146,7 +146,7 @@ export function Footer() {
             <p className="text-sm text-white/50">
               © {currentYear} {SITE_CONFIG.name}. Tous droits réservés.
             </p>
-            <div className="flex gap-6">
+            {/* <div className="flex gap-6">
               {footerNavigation.legal.map((item) => (
                 item.external ? (
                   <a
@@ -168,7 +168,7 @@ export function Footer() {
                   </Link>
                 )
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>

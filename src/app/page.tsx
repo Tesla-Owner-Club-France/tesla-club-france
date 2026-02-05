@@ -1,41 +1,63 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
-import { Container } from "@/components/ui";
+import { Container, Drawer } from "@/components/ui";
 import { Map } from "@/components/map";
-import { ServiceFilters, PartnersList, PartnerDetail } from "@/components/partners";
-import { getActivePartners } from "@/lib/data/partners-mock";
-import type { Partner, ServiceType } from "@/types";
+import { CategoryFilters, PartnersList, PartnerDetail } from "@/components/partners";
+import { getPartners, getActiveCategories } from "@/lib/data/partners";
+import type { Partner, CategoryType } from "@/types";
 
 export default function HomePage() {
   // State
-  const [selectedServices, setSelectedServices] = useState<ServiceType[]>([]);
+  const [selectedCategories, setSelectedCategories] = useState<CategoryType[]>([]);
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
+  const [showOnlyWithBenefits, setShowOnlyWithBenefits] = useState(false);
 
-  // Get all partners
-  const allPartners = useMemo(() => getActivePartners(), []);
+  // Get all partners and active categories
+  const allPartners = useMemo(() => getPartners(), []);
+  const activeCategories = useMemo(() => getActiveCategories(), []);
+  
+  // Count partners with benefits
+  const partnersWithBenefitsCount = useMemo(() => 
+    allPartners.filter((p) => p.membersBenefits).length,
+    [allPartners]
+  );
 
-  // Filter partners based on selected services
+  // Filter partners based on selected categories and benefits filter
   const filteredPartners = useMemo(() => {
-    if (selectedServices.length === 0) return allPartners;
+    let result = allPartners;
     
-    return allPartners.filter((partner) =>
-      // OR logic: partner has at least one of the selected services
-      partner.services.some((service) => selectedServices.includes(service))
-    );
-  }, [allPartners, selectedServices]);
+    // Filter by benefits
+    if (showOnlyWithBenefits) {
+      result = result.filter((partner) => partner.membersBenefits);
+    }
+    
+    // Filter by categories
+    if (selectedCategories.length > 0) {
+      result = result.filter((partner) =>
+        selectedCategories.includes(partner.category)
+      );
+    }
+    
+    return result;
+  }, [allPartners, selectedCategories, showOnlyWithBenefits]);
 
   // Handlers
-  const handleServiceToggle = useCallback((service: ServiceType) => {
-    setSelectedServices((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service]
+  const handleCategoryToggle = useCallback((category: CategoryType) => {
+    setSelectedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
     );
   }, []);
 
   const handleClearFilters = useCallback(() => {
-    setSelectedServices([]);
+    setSelectedCategories([]);
+    setShowOnlyWithBenefits(false);
+  }, []);
+
+  const handleToggleBenefitsFilter = useCallback(() => {
+    setShowOnlyWithBenefits((prev) => !prev);
   }, []);
 
   const handlePartnerSelect = useCallback((partner: Partner) => {
@@ -55,7 +77,7 @@ export default function HomePage() {
             Nos Partenaires
           </h1>
           <p className="text-text-secondary text-lg">
-            Trouvez un professionnel certifié près de chez vous
+            Trouvez un professionnel partenaire du club près de chez vous
           </p>
         </div>
 
@@ -64,12 +86,16 @@ export default function HomePage() {
           {/* Sidebar */}
           <div className="space-y-4 order-2 lg:order-1">
             {/* Filters */}
-            <ServiceFilters
-              selectedServices={selectedServices}
-              onServiceToggle={handleServiceToggle}
+            <CategoryFilters
+              selectedCategories={selectedCategories}
+              onCategoryToggle={handleCategoryToggle}
               onClearAll={handleClearFilters}
               partnersCount={filteredPartners.length}
               totalCount={allPartners.length}
+              activeCategories={activeCategories}
+              showOnlyWithBenefits={showOnlyWithBenefits}
+              onToggleBenefitsFilter={handleToggleBenefitsFilter}
+              benefitsCount={partnersWithBenefitsCount}
             />
 
             {/* Partners List - Desktop */}
@@ -80,16 +106,6 @@ export default function HomePage() {
                 onPartnerSelect={handlePartnerSelect}
               />
             </div>
-
-            {/* Partner Detail */}
-            {selectedPartner && (
-              <div className="hidden lg:block">
-                <PartnerDetail
-                  partner={selectedPartner}
-                  onClose={handleCloseDetail}
-                />
-              </div>
-            )}
           </div>
 
           {/* Map */}
@@ -107,29 +123,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Mobile Partner Detail (Bottom Sheet) */}
-        {selectedPartner && (
-          <div className="lg:hidden fixed inset-x-0 bottom-0 z-50 animate-slide-up">
-            <div className="bg-white rounded-t-2xl shadow-xl border-t border-border max-h-[70vh] overflow-y-auto">
-              {/* Handle */}
-              <div className="sticky top-0 bg-white pt-3 pb-2">
-                <div className="w-12 h-1.5 bg-border rounded-full mx-auto" />
-              </div>
-              <div className="px-4 pb-6">
-                <PartnerDetail
-                  partner={selectedPartner}
-                  onClose={handleCloseDetail}
-                />
-              </div>
-            </div>
-            {/* Backdrop */}
-            <div
-              className="fixed inset-0 bg-black/30 -z-10"
-              onClick={handleCloseDetail}
-            />
-          </div>
-        )}
-
         {/* Mobile Partners List */}
         <div className="lg:hidden mt-6">
           <PartnersList
@@ -139,6 +132,22 @@ export default function HomePage() {
           />
         </div>
       </Container>
+
+      {/* Drawer pour afficher les détails du partenaire */}
+      <Drawer
+        isOpen={selectedPartner !== null}
+        onClose={handleCloseDetail}
+        title={selectedPartner?.name || "Détails du partenaire"}
+        position="left"
+        width="420px"
+      >
+        {selectedPartner && (
+          <PartnerDetail
+            partner={selectedPartner}
+            hideHeader
+          />
+        )}
+      </Drawer>
     </div>
   );
 }
