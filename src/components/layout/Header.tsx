@@ -9,6 +9,7 @@ import { SITE_CONFIG } from "@/types";
 
 // Base URL du site principal
 const MAIN_SITE_URL = "club-tesla.fr";
+const MAIN_SITE_URL_WITH_PROTOCOLE=`https://www.${MAIN_SITE_URL}`
 
 const navigation = [
   { name: "Accueil", href: `https://www.${MAIN_SITE_URL}/site/`, external: true },
@@ -29,7 +30,7 @@ export function Header() {
       <Container>
         <nav className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo - pointe vers le site principal */}
-          <a href={MAIN_SITE_URL} className="flex items-center gap-3 group">
+          <a href={MAIN_SITE_URL_WITH_PROTOCOLE} className="flex items-center gap-3 group">
             <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg lg:text-xl">T</span>
             </div>
