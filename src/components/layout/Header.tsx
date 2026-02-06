@@ -18,7 +18,7 @@ const navigation = [
   { name: "Événements", href: `https://events.${MAIN_SITE_URL}/events`, external: true },
   { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70`, external: true },
   { name: "Forum", href: `https://community.${MAIN_SITE_URL}/`, external: true },
-  { name: "Contact", href: `https://www.${MAIN_SITE_URL}/site/Contact-69`, external: true },
+  //{ name: "Boutique", href: SITE_CONFIG.links.shop, external: true },
 ];
 
 export function Header() {
@@ -87,6 +87,18 @@ export function Header() {
           </div>
 
           {/* CTA Button */}
+          <div className="hidden lg:block">
+
+            <a
+                href={SITE_CONFIG.links.shop}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full px-4 py-3 text-center text-base font-semibold text-white bg-blue-500 hover:bg-blue-800 rounded-lg transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+            >
+              Boutique
+            </a>
+          </div>
           <div className="hidden lg:block">
             <a
               href={SITE_CONFIG.links.membership}
@@ -174,6 +186,19 @@ export function Header() {
                   </Link>
                 );
               })}
+
+              <div className="pt-4 mt-2 border-t border-border">
+
+                <a
+                    href={SITE_CONFIG.links.shop}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full px-4 py-3 text-center text-base font-semibold text-white bg-blue-500 hover:bg-blue-800 rounded-lg transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                  Boutique
+                </a>
+              </div>
               <div className="pt-4 mt-2 border-t border-border">
                 <a
                   href={SITE_CONFIG.links.membership}
