@@ -1,6 +1,6 @@
 services:
   web:
-    image: partenaires-web-dev
+    image: ${IMAGE_NAME:-tocf-site}
     build:
       context: .
       target: runner

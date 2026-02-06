@@ -1,6 +1,6 @@
 services:
   web-dev:
-    image: partenaires-web-dev
+    image: ${IMAGE_NAME:-tocf-site-dev}
     build:
       context: .
       target: deps

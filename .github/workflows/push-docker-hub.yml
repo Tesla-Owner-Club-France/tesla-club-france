@@ -46,9 +46,12 @@ jobs:
           SERVER_IP: ${{ secrets.SERVER_IP }}
           APP_DIR: ${{ secrets.APP_DIR }}
           APP_PORT: 3000
+          APP_IMAGE_NAME: tocf-site
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SERVER_USER@$SERVER_IP "
           cd $APP_DIR &&
           echo PORT_WEB=$APP_PORT > $APP_DIR/.env &&
+          echo IMAGE_NAME=$APP_IMAGE_NAME >> $APP_DIR/.env &&
+          docker compose -f compose-deploy.yaml build --no-cache && 
           docker compose -f compose-deploy.yaml up --build --always-recreate-deps -d
           "
