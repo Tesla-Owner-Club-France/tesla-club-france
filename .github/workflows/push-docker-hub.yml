@@ -50,5 +50,5 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SERVER_USER@$SERVER_IP "
           cd $APP_DIR &&
           echo PORT_WEB=$APP_PORT > $APP_DIR/.env &&
-          docker compose -f compose-deploy.yaml up --build --always-recreate-deps
+          docker compose -f compose-deploy.yaml up --build --always-recreate-deps -d
           "
