@@ -3,14 +3,15 @@ services:
     image: partenaires-web-dev
     build:
       context: .
-      target: deps
+      target: runner
     working_dir: /app
     command: npm start
     ports:
       - "${PORT_WEB:-3000}:3000"
     environment:
-      - NODE_ENV=prod
+      - NODE_ENV=production
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/.next
     container_name: ${COMPOSE_PROJECT_NAME:-site-club-tesla}-site
