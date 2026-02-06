@@ -3,7 +3,7 @@ import { Container } from "@/components/ui";
 import { SITE_CONFIG } from "@/types";
 
 // Base URL du site principal
-const MAIN_SITE_URL = ".club-tesla.fr";
+const MAIN_SITE_URL = "club-tesla.fr";
 
 const footerNavigation = {
   main: [
