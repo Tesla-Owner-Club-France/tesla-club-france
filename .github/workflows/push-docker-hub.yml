@@ -53,5 +53,6 @@ jobs:
           echo PORT_WEB=$APP_PORT > $APP_DIR/.env &&
           echo IMAGE_NAME=$APP_IMAGE_NAME >> $APP_DIR/.env &&
           docker compose -f compose-deploy.yaml build --no-cache && 
-          docker compose -f compose-deploy.yaml up --build --always-recreate-deps -d
+          docker compose -f compose-deploy.yaml down || true && 
+          docker compose -f compose-deploy.yaml up -d
           "
