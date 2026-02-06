@@ -7,7 +7,7 @@
 # Pour obtenir une version plus récente, vous devez mettre à jour le SHA.
 # Vous pouvez également référencer une balise ou une branche, mais l’action peut changer sans avertissement.
 
-name: Publish Docker image
+name: Deploy on dev
 
 on:
   push:
