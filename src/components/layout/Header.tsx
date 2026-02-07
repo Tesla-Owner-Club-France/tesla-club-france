@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui";
 import { SITE_CONFIG } from "@/types";
 import {Logo} from "@/components/layout/Logo";
+import {LogoText} from "@/components/layout/LogoText";
 
 // Base URL du site principal
 const MAIN_SITE_URL = "club-tesla.fr";
@@ -22,6 +23,8 @@ const navigation = [
   //{ name: "Boutique", href: SITE_CONFIG.links.shop, external: true },
 ];
 
+const LOGO_TEXT_PATH = '/assets/img/logo_text.png'
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -35,12 +38,7 @@ export function Header() {
             <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-lg flex items-center justify-center">
               <Logo />
             </div>
-            <div className="hidden sm:block">
-              <p className="font-bold text-text-primary text-sm lg:text-base leading-tight">
-                Tesla Owners Club
-              </p>
-              <p className="text-text-muted text-xs lg:text-sm">France</p>
-            </div>
+            <LogoText />
           </a>
 
           {/* Desktop Navigation */}
