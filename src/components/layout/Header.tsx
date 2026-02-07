@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui";
 import { SITE_CONFIG } from "@/types";
+import {Logo} from "@/components/layout/Logo";
 
 // Base URL du site principal
 const MAIN_SITE_URL = "club-tesla.fr";
@@ -31,8 +32,8 @@ export function Header() {
         <nav className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo - pointe vers le site principal */}
           <a href={MAIN_SITE_URL_WITH_PROTOCOLE} className="flex items-center gap-3 group">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg lg:text-xl">T</span>
+            <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-lg flex items-center justify-center">
+              <Logo />
             </div>
             <div className="hidden sm:block">
               <p className="font-bold text-text-primary text-sm lg:text-base leading-tight">
