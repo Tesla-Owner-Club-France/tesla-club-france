@@ -94,7 +94,7 @@ export function Header() {
                 href={SITE_CONFIG.links.shop}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full px-4 py-3 text-center text-base font-semibold text-white bg-blue-500 hover:bg-blue-800 rounded-lg transition-colors"
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-blue-500 hover:bg-blue-800 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
             >
               Boutique
