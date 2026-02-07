@@ -112,6 +112,7 @@ export const SITE_CONFIG = {
     instagram: "https://www.instagram.com/teslaclubfrance/",
     youtube: "https://www.youtube.com/channel/UC_S5Lpq9lYrn2rXLMd_ryTw",
     twitter: "https://x.com/TeslaClubFrance",
+    shop: "https://www.club-tesla.fr/boutique/"
   },
   contact: {
     email: "contact@club-tesla.fr",

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui";
 import { SITE_CONFIG } from "@/types";
+import {Logo} from "@/components/layout/Logo";
 
 // Base URL du site principal
 const MAIN_SITE_URL = "club-tesla.fr";
@@ -18,7 +19,7 @@ const navigation = [
   { name: "Événements", href: `https://events.${MAIN_SITE_URL}/events`, external: true },
   { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70`, external: true },
   { name: "Forum", href: `https://community.${MAIN_SITE_URL}/`, external: true },
-  { name: "Contact", href: `https://www.${MAIN_SITE_URL}/site/Contact-69`, external: true },
+  //{ name: "Boutique", href: SITE_CONFIG.links.shop, external: true },
 ];
 
 export function Header() {
@@ -31,8 +32,8 @@ export function Header() {
         <nav className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo - pointe vers le site principal */}
           <a href={MAIN_SITE_URL_WITH_PROTOCOLE} className="flex items-center gap-3 group">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg lg:text-xl">T</span>
+            <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-lg flex items-center justify-center">
+              <Logo />
             </div>
             <div className="hidden sm:block">
               <p className="font-bold text-text-primary text-sm lg:text-base leading-tight">
@@ -87,6 +88,18 @@ export function Header() {
           </div>
 
           {/* CTA Button */}
+          <div className="hidden lg:block">
+
+            <a
+                href={SITE_CONFIG.links.shop}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-blue-500 hover:bg-blue-800 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
+                onClick={() => setIsMenuOpen(false)}
+            >
+              Boutique
+            </a>
+          </div>
           <div className="hidden lg:block">
             <a
               href={SITE_CONFIG.links.membership}
@@ -174,6 +187,19 @@ export function Header() {
                   </Link>
                 );
               })}
+
+              <div className="pt-4 mt-2 border-t border-border">
+
+                <a
+                    href={SITE_CONFIG.links.shop}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full px-4 py-3 text-center text-base font-semibold text-white bg-blue-500 hover:bg-blue-800 rounded-lg transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                  Boutique
+                </a>
+              </div>
               <div className="pt-4 mt-2 border-t border-border">
                 <a
                   href={SITE_CONFIG.links.membership}

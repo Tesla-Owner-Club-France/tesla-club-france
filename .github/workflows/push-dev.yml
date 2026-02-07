@@ -7,14 +7,12 @@
 # Pour obtenir une version plus récente, vous devez mettre à jour le SHA.
 # Vous pouvez également référencer une balise ou une branche, mais l’action peut changer sans avertissement.
 
-name: Publish Docker image
+name: Deploy on dev
 
 on:
-  release:
-    types: [published]
   push:
     branches:
-      - main
+      - dev
   workflow_dispatch:
 
 
@@ -35,7 +33,7 @@ jobs:
         env:
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SERVER_IP: ${{ secrets.SERVER_IP }}
-          APP_DIR: ${{ secrets.APP_DIR }}
+          APP_DIR: ${{ secrets.APP_DIR_DEV }}
         run: |
           ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
           rsync -avzO --no-perms --delete ./ $SERVER_USER@$SERVER_IP:$APP_DIR
@@ -44,9 +42,9 @@ jobs:
         env:
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SERVER_IP: ${{ secrets.SERVER_IP }}
-          APP_DIR: ${{ secrets.APP_DIR }}
-          APP_PORT: 3000
-          APP_IMAGE_NAME: tocf-site
+          APP_DIR: ${{ secrets.APP_DIR_DEV }}
+          APP_PORT: 3001
+          APP_IMAGE_NAME: tocf-site-dev
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SERVER_USER@$SERVER_IP "
           cd $APP_DIR &&
