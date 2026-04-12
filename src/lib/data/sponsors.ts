@@ -23,6 +23,7 @@ interface RawSponsor {
   sponsor_level: string;
   tesla_benefits: string;
   club_benefits: string;
+  description?: string;
 }
 
 /**
@@ -50,6 +51,7 @@ function transformSponsor(raw: RawSponsor): Partner {
     sponsorLevel: (raw.sponsor_level as any) || "None",
     teslaBenefits: raw.tesla_benefits || undefined,
     clubBenefits: raw.club_benefits || undefined,
+    description: raw.description || undefined,
   };
 }
 

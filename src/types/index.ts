@@ -44,6 +44,7 @@ export interface Partner {
   sponsorLevel?: SponsorLevel;
   teslaBenefits?: string; // Avantage du partenaire par rapport à Tesla
   clubBenefits?: string;  // Avantage que propose le partenaire pour le club
+  description?: string;   // Description générale du sponsor
 }
 
 // ===== NEWS TYPES =====

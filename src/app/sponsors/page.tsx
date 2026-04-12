@@ -38,24 +38,9 @@ export default function SponsorsPage() {
           </p>
         </div>
 
-        {/* Advanced Sponsors */}
-        {groupedSponsors.Advanced.length > 0 && (
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold text-text-primary mb-8 flex items-center gap-3">
-              <span className="h-8 w-1 bg-primary rounded-full"></span>
-              Sponsors Advanced
-            </h2>
-            <div className="grid gap-8">
-              {groupedSponsors.Advanced.map(sponsor => (
-                <SponsorCard key={sponsor.id} sponsor={sponsor} />
-              ))}
-            </div>
-          </section>
-        )}
-
         {/* Standard Sponsors */}
         {groupedSponsors.Standard.length > 0 && (
-          <section>
+          <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-8 flex items-center gap-3">
               <span className="h-8 w-1 bg-secondary rounded-full"></span>
               Sponsors Standard
@@ -66,6 +51,21 @@ export default function SponsorsPage() {
               ))}
             </div>
           </section>
+        )}
+
+        {/* Advanced Sponsors */}
+        {groupedSponsors.Advanced.length > 0 && (
+            <section className="mb-16">
+              <h2 className="text-2xl font-bold text-text-primary mb-8 flex items-center gap-3">
+                <span className="h-8 w-1 bg-primary rounded-full"></span>
+                Sponsors Advanced
+              </h2>
+              <div className="grid gap-8">
+                {groupedSponsors.Advanced.map(sponsor => (
+                    <SponsorCard key={sponsor.id} sponsor={sponsor} />
+                ))}
+              </div>
+            </section>
         )}
 
         {sponsors.length === 0 && (
@@ -84,15 +84,15 @@ function SponsorCard({ sponsor }: { sponsor: Partner }) {
       <CardContent className="p-0">
         <div className="flex flex-col md:flex-row">
           {/* Logo Section */}
-          <div className="w-full md:w-64 bg-white p-8 flex items-center justify-center border-b md:border-b-0 md:border-r border-border">
-            <div className="relative w-full aspect-square max-w-[160px]">
+          <div className="w-full md:w-80 bg-white p-8 flex items-center justify-center border-b md:border-b-0 md:border-r border-border">
+            <div className="relative w-full aspect-square max-w-[240px]">
               {sponsor.hasLogo ? (
                 <Image
                   src={`/partners/logos/${sponsor.id}.png`}
                   alt={`Logo ${sponsor.name}`}
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 160px, 160px"
+                  sizes="(max-width: 768px) 240px, 240px"
                   unoptimized // Souvent nécessaire pour les logos locaux si pas de configuration Image
                 />
               ) : (
@@ -123,6 +123,12 @@ function SponsorCard({ sponsor }: { sponsor: Partner }) {
                 </a>
               )}
             </div>
+
+            {sponsor.description && (
+              <p className="text-text-secondary mb-6 italic">
+                {sponsor.description}
+              </p>
+            )}
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Tesla Benefits */}
