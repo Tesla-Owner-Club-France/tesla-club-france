@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { Container, Card, CardContent, Badge } from "@/components/ui";
 import { getSponsors } from "@/lib/data/sponsors";
-import type { Partner, SponsorLevel } from "@/types";
+import type {Partner, Sponsor, SponsorLevel} from "@/types";
 import Image from "next/image";
 
 export default function SponsorsPage() {
@@ -11,7 +11,7 @@ export default function SponsorsPage() {
 
   // Group sponsors by level
   const groupedSponsors = useMemo(() => {
-    const groups: Record<SponsorLevel, Partner[]> = {
+    const groups: Record<SponsorLevel, Sponsor[]> = {
       Advanced: [],
       Standard: [],
       None: []
@@ -78,14 +78,14 @@ export default function SponsorsPage() {
   );
 }
 
-function SponsorCard({ sponsor }: { sponsor: Partner }) {
+function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
     <Card className="overflow-hidden border-none shadow-sm hover:shadow-md transition-shadow duration-300">
       <CardContent className="p-0">
         <div className="flex flex-col md:flex-row">
           {/* Logo Section */}
           <div className="w-full md:w-80 bg-white p-8 flex items-center justify-center border-b md:border-b-0 md:border-r border-border">
-            <div className="relative w-full aspect-square max-w-[240px]">
+            <div className="relative w-full aspect-square max-w-60">
               {sponsor.hasLogo ? (
                 <Image
                   src={`/partners/logos/${sponsor.id}.png`}
@@ -147,7 +147,7 @@ function SponsorCard({ sponsor }: { sponsor: Partner }) {
                   <span className="text-secondary">🤝</span> Avantage Club
                 </h4>
                 <p className="text-text-primary leading-relaxed">
-                  {sponsor.clubBenefits || sponsor.membersBenefits || "Soutien privilégié aux activités du club."}
+                  {sponsor.clubBenefits  || "Soutien privilégié aux activités du club."}
                 </p>
               </div>
             </div>

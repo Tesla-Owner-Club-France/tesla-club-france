@@ -40,7 +40,15 @@ export interface Partner {
   // Coordonnées pour la carte (à géocoder plus tard)
   latitude?: number;
   longitude?: number;
-  // Nouveaux champs pour les sponsors
+}
+
+export interface Sponsor {
+  id: string;
+  name: string;
+  website?: string;
+  category: CategoryType;
+  categoryLabel: string; // Label original du JSON
+  hasLogo: boolean;
   sponsorLevel?: SponsorLevel;
   teslaBenefits?: string; // Avantage du partenaire par rapport à Tesla
   clubBenefits?: string;  // Avantage que propose le partenaire pour le club
