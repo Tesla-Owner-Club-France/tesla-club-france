@@ -1,0 +1,35 @@
+[
+  {
+    "id": "101a62c8-9b53-4221-bbfb-d33babf579c5",
+    "name": "Michelin",
+    "logo": "true",
+    "website": "https://www.michelin.fr/",
+    "category": "Pneumatique",
+    "sponsor_level": "Standard",
+    "tesla_benefits": "Pneumatiques haute performance optimisés pour l'autonomie et le silence des véhicules électriques.",
+    "club_benefits": "Soutien financier de 10 000€ HT et dotation en matériel/goodies pour les événements du club.",
+    "description": "Leader mondial du pneumatique, Michelin accompagne le Tesla Owners Club France depuis ses débuts en proposant des solutions innovantes adaptées aux véhicules électriques."
+  },
+  {
+    "id": "51fa7a0f-c8ad-4ca6-ba86-14ae8e2e0f51",
+    "name": "Groupe Albax - Carrosserie Lecoq",
+    "logo": "true",
+    "website": "https://www.albax.fr/",
+    "category": "Garage",
+    "sponsor_level": "Advanced",
+    "tesla_benefits": "Carrosserie de prestige, Tesla Approved Bodyshop, spécialiste de la restauration de véhicules haut de gamme.",
+    "club_benefits": "Partenariat historique et expertise technique pour les membres du club.",
+    "description": "Référence absolue de la carrosserie de prestige, Lecoq est un partenaire 'Tesla Approved' qui assure une qualité de réparation exceptionnelle pour votre Tesla."
+  },
+  {
+    "id": "02ee74e9-4cd0-4ca2-ab15-f7027fb99f46",
+    "name": "LocaLease",
+    "logo": "true",
+    "website": "https://www.localease.fr/leasing-tesla/",
+    "category": "Leasing",
+    "sponsor_level": "Standard",
+    "tesla_benefits": "Solutions de leasing flexibles et adaptées aux véhicules Tesla.",
+    "club_benefits": "Offre exclusive sur les bornes de recharge et les loyers pour les membres.",
+    "description": "Spécialiste du leasing pour véhicules électriques, LocaLease propose des solutions de financement sur-mesure pour faciliter l'acquisition de votre Tesla."
+  }
+]
