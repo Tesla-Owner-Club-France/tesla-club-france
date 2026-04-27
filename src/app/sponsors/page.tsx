@@ -34,7 +34,7 @@ export default function SponsorsPage() {
             Nos Sponsors
           </h1>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Découvrez les partenaires officiels qui soutiennent le Tesla Owners Club France et les avantages qu'ils vous proposent.
+            Découvrez les partenaires officiels qui soutiennent le Tesla Owners Club France et les avantages qu&apos;ils vous proposent.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function SponsorsPage() {
 
         {sponsors.length === 0 && (
           <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-border">
-            <p className="text-text-secondary">Aucun sponsor n'est configuré pour le moment.</p>
+            <p className="text-text-secondary">Aucun sponsor n&apos;est configuré pour le moment.</p>
           </div>
         )}
       </Container>

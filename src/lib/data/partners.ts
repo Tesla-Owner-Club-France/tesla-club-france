@@ -48,10 +48,6 @@ function transformPartner(raw: RawPartner): Partner {
     // Coordonnées GPS (géocodées depuis les adresses)
     latitude: raw.latitude,
     longitude: raw.longitude,
-    // Nouveaux champs sponsors
-    sponsorLevel: (raw.sponsor_level as any) || "None",
-    teslaBenefits: raw.tesla_benefits || undefined,
-    clubBenefits: raw.club_benefits || undefined,
   };
 }
 
