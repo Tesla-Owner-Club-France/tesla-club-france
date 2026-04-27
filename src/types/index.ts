@@ -21,7 +21,7 @@ export type CategoryType =
   | "convoyage"
   | "leasing";
 
-export type SponsorLevel = "Standard" | "Advanced" | "None";
+export type SponsorLevel = "Premium" | "Advanced" | "None";
 
 export interface Partner {
   id: string;
