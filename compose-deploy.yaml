@@ -12,6 +12,10 @@ services:
       - NODE_ENV=production
     volumes:
       - .:/app
-      - /app/node_modules
-      - /app/.next
+      - web_node_modules:/app/node_modules
+      - web_cache:/app/.next
     container_name: ${COMPOSE_PROJECT_NAME:-site-club-tesla}-site
+
+volumes:
+  web_node_modules:
+  web_cache:
