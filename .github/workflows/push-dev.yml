@@ -36,7 +36,8 @@ jobs:
           APP_DIR: ${{ secrets.APP_DIR_DEV }}
         run: |
           ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
-          rsync -avzO --no-perms --delete ./ $SERVER_USER@$SERVER_IP:$APP_DIR
+          rsync -avzO --no-perms --exclude '.next' --delete ./ $SERVER_USER@$SERVER_IP:$APP_DIR
+          
 
       - name: Deploy to Server
         env:
