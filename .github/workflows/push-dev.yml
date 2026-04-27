@@ -55,8 +55,6 @@ jobs:
           docker compose -f compose-deploy.yaml build --no-cache && 
           echo 'Building done' && 
           docker compose -f compose-deploy.yaml down --remove-orphans || true  &&
-          echo 'Build down and Clear .next directory' && 
-          rm -rd .next/* &&
           echo 'Clear down' &&
           docker compose -f compose-deploy.yaml up -d
           "
