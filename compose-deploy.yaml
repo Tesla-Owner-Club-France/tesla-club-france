@@ -5,7 +5,7 @@ services:
       context: .
       target: runner
     working_dir: /app
-    command: npm start
+    command: npm run start
     ports:
       - "${PORT_WEB:-3000}:3000"
     environment:
