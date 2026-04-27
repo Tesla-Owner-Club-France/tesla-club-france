@@ -51,9 +51,12 @@ jobs:
           cd $APP_DIR &&
           echo PORT_WEB=$APP_PORT > $APP_DIR/.env &&
           echo IMAGE_NAME=$APP_IMAGE_NAME >> $APP_DIR/.env &&
+          echo 'Building' && 
           docker compose -f compose-deploy.yaml build --no-cache && 
           echo 'Building done' && 
-          docker compose -f compose-deploy.yaml down --remove-orphans  &&
-          echo 'Down done' &&
-          docker compose -f compose-deploy.yaml up -d --remove-orphans
+          docker compose -f compose-deploy.yaml down --remove-orphans || true  &&
+          echo 'Build down and Clear .next directory' && 
+          rm .next/* &&
+          echo 'Clear down' &&
+          docker compose -f compose-deploy.yaml up -d
           "
