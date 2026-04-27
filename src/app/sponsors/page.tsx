@@ -13,7 +13,7 @@ export default function SponsorsPage() {
   const groupedSponsors = useMemo(() => {
     const groups: Record<SponsorLevel, Sponsor[]> = {
       Advanced: [],
-      Standard: [],
+      Premium: [],
       None: []
     };
     
@@ -38,15 +38,15 @@ export default function SponsorsPage() {
           </p>
         </div>
 
-        {/* Standard Sponsors */}
-        {groupedSponsors.Standard.length > 0 && (
+        {/* Premium Sponsors */}
+        {groupedSponsors.Premium.length > 0 && (
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-text-primary mb-8 flex items-center gap-3">
               <span className="h-8 w-1 bg-secondary rounded-full"></span>
-              Sponsors Standard
+              Sponsors Premium
             </h2>
             <div className="grid gap-8">
-              {groupedSponsors.Standard.map(sponsor => (
+              {groupedSponsors.Premium.map(sponsor => (
                 <SponsorCard key={sponsor.id} sponsor={sponsor} />
               ))}
             </div>

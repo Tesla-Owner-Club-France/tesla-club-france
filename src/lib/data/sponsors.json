@@ -5,7 +5,7 @@
     "logo": "true",
     "website": "https://www.michelin.fr/",
     "category": "Pneumatique",
-    "sponsor_level": "Standard",
+    "sponsor_level": "Premium",
     "tesla_benefits": "Pneumatiques haute performance optimisés pour l'autonomie et le silence des véhicules électriques.",
     "club_benefits": "Soutien financier  et dotation en matériel/goodies pour les événements du club.",
     "description": "Leader mondial du pneumatique, Michelin accompagne le Tesla Owners Club France depuis ses débuts en proposant des solutions innovantes adaptées aux véhicules électriques."
@@ -27,7 +27,7 @@
     "logo": "true",
     "website": "https://www.localease.fr/leasing-tesla/",
     "category": "Leasing",
-    "sponsor_level": "Standard",
+    "sponsor_level": "Premium",
     "tesla_benefits": "Solutions de leasing flexibles et adaptées aux véhicules Tesla.",
     "club_benefits": "Offre exclusive sur les bornes de recharge et les loyers pour les membres.",
     "description": "Spécialiste du leasing pour véhicules électriques, LocaLease propose des solutions de financement sur-mesure pour faciliter l'acquisition de votre Tesla."
@@ -38,7 +38,7 @@
     "logo": "true",
     "website": "https://www.enhauto.com/fr",
     "category": "Accessoires",
-    "sponsor_level": "Standard",
+    "sponsor_level": "Premium",
     "tesla_benefits": "Accessoires et améliorations dédiés aux véhicules Tesla.",
     "club_benefits": "Offre de réduction supplémentaire sur l’ensemble du site enhauto.com.",
     "description": "Enhance propose des accessoires et solutions d'amélioration pour les véhicules Tesla."
@@ -49,7 +49,7 @@
     "logo": "true",
     "website": "https://eu.3wliners.com/",
     "category": "Accessoires",
-    "sponsor_level": "Standard",
+    "sponsor_level": "Premium",
     "tesla_benefits": "Tapis et protections adaptés aux véhicules Tesla.",
     "club_benefits": "Offre négociée pour le Tesla Owners Club France.",
     "description": "3W propose des tapis et protections intérieures conçus pour protéger et équiper les véhicules Tesla."
