@@ -54,7 +54,7 @@ jobs:
           echo 'Building' && 
           docker compose -f compose-deploy.yaml build --no-cache && 
           echo 'Building done' && 
-          docker compose -f compose-deploy.yaml down --remove-orphans || true  &&
+          docker compose -f compose-deploy.yaml down --remove-orphans --volumes || true  &&
           echo 'Clear down' &&
           docker compose -f compose-deploy.yaml up -d
           "
