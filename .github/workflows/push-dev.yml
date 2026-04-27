@@ -52,6 +52,8 @@ jobs:
           echo PORT_WEB=$APP_PORT > $APP_DIR/.env &&
           echo IMAGE_NAME=$APP_IMAGE_NAME >> $APP_DIR/.env &&
           docker compose -f compose-deploy.yaml build --no-cache && 
-          docker compose -f compose-deploy.yaml down --remove-orphans || true && 
-          docker compose -f compose-deploy.yaml up -d
+          echo 'Building done' && 
+          docker compose -f compose-deploy.yaml down --remove-orphans  &&
+          echo 'Down done' &&
+          docker compose -f compose-deploy.yaml up -d --remove-orphans
           "
