@@ -61,5 +61,25 @@ export const REGIONAL_REPS: StaffMember[] = [
 export const CLUB_DESCRIPTION = {
   intro: "Le Tesla Owners Club France est le seul club officiel en France reconnu par Tesla.",
   mission: "Notre mission est de rassembler les propriétaires de Tesla, de partager notre passion et de bénéficier d'avantages exclusifs auprès de partenaires sélectionnés.",
-  history: "Fondé par des passionnés, le club a grandi pour devenir l'une des plus grandes communautés de propriétaires de véhicules électriques en Europe."
+  history: "Le Tesla Owners Club France (TOCF) est une association à but non lucratif. Reconnu officiellement par Tesla, notre club est un espace d'échange, d'entraide et de convivialité pour tous les propriétaires et futurs propriétaires de la marque.",
+  vision: "Se réunir autour de notre passion et s'entraider : deux axes majeurs pour l'association. C'est dans ce sens que nous avons constitué des groupes régionaux. Ces relais locaux, proches de vous, vous permettront d'échanger les bons plans de votre territoire et de vous entraider.",
+  independence: "Le TOCF est indépendant de Tesla Motors et d'autres partenaires, et n'a aucun fondement politique. L'association est engagée contractuellement avec Tesla Inc. afin de garantir à nos membres associatifs que leurs intérêts seront protégés en toutes circonstances."
+};
+
+export const CLUB_MISSIONS = [
+  "Rassembler les propriétaires et enthousiastes de véhicules électriques Tesla en France.",
+  "Créer un lien privilégié entre nos membres et Tesla Inc. au travers d'annonces officielles, de télé-conférences, et de groupes de travail en partenariat direct avec Tesla Inc.",
+  "Organiser des événements nationaux et/ou en région, permettant de partager l'enthousiasme de rouler en Tesla et de se rencontrer entre propriétaires.",
+  "Promouvoir les véhicules de marque Tesla Inc., organiser la présence du club et/ou de ses membres sur des événements tels que des salons, des rallyes, des œuvres caritatives, etc.",
+  "Permettre un dialogue entre les propriétaires et les structures Tesla (France et corporate) afin de mettre en lumière les besoins de la communauté française."
+];
+
+export const PRESIDENT_WORD = {
+  title: "Le mot du président",
+  text: [
+    "Tesla, une marque qui fait rêver et possède cette étonnante capacité de générer passion et engouement chez nombre de ses propriétaires, loin de ce champ d'intérêt jusqu’alors ! Ce qui explique la création de toutes ces communautés de passionnés autour de la marque, actives et animées. Le Tesla Owners Club France, issu de ces toutes premières communautés, est l’association officielle en France reconnue par Tesla.",
+    "Notre club des propriétaires de Tesla en France, avec ses antennes régionales, vous propose de partager des moments de convivialité et d'échanges lors de plus d'une soixantaine d'événements ou de rassemblements organisés chaque année. Nous avons également mis en place des canaux de communication (forum, Discord, etc.) pour favoriser l'entraide et le partage d'informations entre membres.",
+    "Je tiens à remercier chaleureusement les bénévoles de toutes les régions de France ainsi que les membres du bureau associatif qui font vivre le club. Un grand merci également à nos sponsors et partenaires qui nous soutiennent dans la réalisation de nos événements.",
+    "Bienvenue à tous et merci à ceux qui nous ont déjà fait confiance."
+  ]
 };
