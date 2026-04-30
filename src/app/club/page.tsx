@@ -34,7 +34,7 @@ export default function ClubPage() {
         </Container>
       </div>
 
-      <Container className="-mt-12 relative z-20">
+      <Container className="mt-12 relative z-20">
         {/* Missions & President Word Section */}
         <section className="mb-24">
           <div className="grid lg:grid-cols-12 gap-8 items-start">
@@ -46,7 +46,7 @@ export default function ClubPage() {
                 </div>
                 <h2 className="text-3xl font-bold text-text-primary">Notre Mission</h2>
               </div>
-              
+
               <div className="prose prose-slate max-w-none text-text-secondary">
                 <p className="mb-10 leading-relaxed text-xl text-text-primary font-medium">
                   {CLUB_DESCRIPTION.mission}
@@ -77,7 +77,7 @@ export default function ClubPage() {
                       <p className="text-primary font-medium">Tesla Owners Club France</p>
                     </div>
                   </div>
-                  
+
                   <div className="relative">
                     <span className="absolute -top-4 -left-2 text-6xl text-primary/10 font-serif leading-none">"</span>
                     <div className="space-y-4 text-text-secondary leading-relaxed relative z-10 italic">
@@ -91,8 +91,13 @@ export default function ClubPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
 
-              {/* Vision Card */}
+        <section>
+          <Container>
+            {/* Vision Card */}
               <div className="bg-surface p-8 lg:p-10 rounded-3xl border border-border">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-primary shadow-sm border border-border text-xl">
@@ -100,47 +105,51 @@ export default function ClubPage() {
                   </div>
                   <h2 className="text-2xl font-bold text-text-primary">Notre Vision</h2>
                 </div>
-                <p className="text-lg text-text-secondary leading-relaxed mb-8">
-                  {CLUB_DESCRIPTION.vision}
-                </p>
-                <div className="p-5 bg-white rounded-2xl border border-border shadow-sm mb-8">
-                  <p className="text-sm text-text-secondary leading-relaxed italic flex gap-3">
-                    <span className="text-primary font-bold">ⓘ</span>
-                    {CLUB_DESCRIPTION.independence}
+                <div className="grid grid-cols-1 lg:grid-cols-2 justify-center mb-8 gap-4">
+                  <p className=" text-lg text-text-secondary leading-relaxed mb-8">
+                    {CLUB_DESCRIPTION.vision}
                   </p>
+
+                  <div className="grid-cols-2 lg:grid-cols-1 gap-8 items-center">
+                    <div className="p-5 bg-white rounded-2xl border border-border shadow-sm mb-8">
+                      <p className="text-sm text-text-secondary leading-relaxed italic flex gap-3">
+                        <span className="text-primary font-bold">ⓘ</span>
+                        {CLUB_DESCRIPTION.independence}
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                      <a
+                          href={SITE_CONFIG.links.membership}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 px-6 py-4 bg-primary text-white text-center font-bold rounded-xl hover:bg-primary-dark transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-[0.98]"
+                      >
+                        Devenir membre
+                      </a>
+                      <a
+                          href={SITE_CONFIG.links.events}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 px-6 py-4 border border-border bg-white text-center text-text-primary font-bold rounded-xl hover:bg-surface transition-all active:scale-[0.98]"
+                      >
+                        Nos événements
+                      </a>
+                    </div>
+                  </div>
+
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href={SITE_CONFIG.links.membership}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 px-6 py-4 bg-primary text-white text-center font-bold rounded-xl hover:bg-primary-dark transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-[0.98]"
-                  >
-                    Devenir membre
-                  </a>
-                  <a
-                    href={SITE_CONFIG.links.events}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 px-6 py-4 border border-border bg-white text-center text-text-primary font-bold rounded-xl hover:bg-surface transition-all active:scale-[0.98]"
-                  >
-                    Nos événements
-                  </a>
-                </div>
+
               </div>
-            </div>
-          </div>
+          </Container>
         </section>
 
         {/* Info Section - Modern separator */}
-        <section className="mb-24 relative">
-          <div className="absolute inset-0 flex items-center" aria-hidden="true">
-            <div className="w-full border-t border-border"></div>
-          </div>
+        <section className="mx-24 relative">
+
           <div className="relative flex justify-center">
             <span className="bg-surface px-6 text-sm font-bold text-text-secondary uppercase tracking-[0.2em]">À propos du club</span>
           </div>
-          
+
           <div className="mt-16 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -211,7 +220,7 @@ export default function ClubPage() {
           <div className="bg-text-primary rounded-[3rem] p-8 lg:p-16 text-white overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
-            
+
             <div className="relative z-10">
               <div className="text-center mb-16">
                 <h2 className="text-3xl lg:text-5xl font-bold mb-6">Responsables Régionaux</h2>
