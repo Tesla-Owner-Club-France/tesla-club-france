@@ -15,7 +15,7 @@ const MAIN_SITE_URL_WITH_PROTOCOLE=`https://www.${MAIN_SITE_URL}`
 
 const navigation = [
   { name: "Accueil", href: `https://www.${MAIN_SITE_URL}/site/`, external: true },
-  { name: "Le Club", href: `https://www.${MAIN_SITE_URL}/site/Le_Club-54`, external: true },
+  { name: "Le Club", href: "/club" },
   { name: "Partenaires", href: "/" },
   { name: "Sponsors", href: "/sponsors", external: false },
   { name: "Événements", href: `https://events.${MAIN_SITE_URL}/events`, external: true },
