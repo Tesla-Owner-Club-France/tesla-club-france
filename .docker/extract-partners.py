@@ -1,5 +1,9 @@
 import os
 import json
+from itertools import count
+
+import requests
+import time
 
 
 class JsonArray:
@@ -20,7 +24,8 @@ class JsonArray:
         return res
 
     def createJson(self):
-        print(json.JSONEncoder().encode(self.toJson()))
+        # print(json.JSONEncoder().encode(self.toJson()))
+        None
 
 class JsonData:
     def __init__(self):
@@ -56,6 +61,24 @@ class JsonData:
                 "latitude" : self.latitude,
                 "longitude" : self.longitude,
             }
+    def getLatitudeLongitude(self):
+        if self.city != '' and self.postal_code != '':
+            url = 'https://nominatim.openstreetmap.org/search'
+            params = {
+                'street' : self.address,
+                'city' : self.city,
+                'postalcode' : self.postal_code,
+                'country' : self.country,
+                'format' : 'json',
+            }
+            response = requests.get(url, params=params, headers={"Content-Type": "application/json", "Accept": "application/json", "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.4 Safari/605.1.15"})
+
+            results = response.json()  # to extract the detail from response
+            print(response.status_code, params)
+            if response.status_code >= 400 and len(results) > 0:
+                self.latitude = results[0]['lat']
+                self.longitude = results[0]['lon']
+            time.sleep(1)
 
 
 class CsvData:
@@ -108,6 +131,7 @@ class CsvConverter:
             json.benefits_conditions = lines.commentObtenirAvantage
             json.latitude = None
             json.longitude = None
+            json.getLatitudeLongitude()
             self.jsonArray.add(json)
 
 
@@ -126,4 +150,5 @@ if __name__ == '__main__':
     csvConverter = CsvConverter(csvPath);
     csvConverter.importCSV()
     csvConverter.convertToJson()
-    csvConverter.jsonArray.createJson()
+
+
