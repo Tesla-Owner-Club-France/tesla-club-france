@@ -6,8 +6,8 @@
     "website": "https://www.michelin.fr/",
     "category": "Pneumatique",
     "sponsor_level": "Premium",
-    "tesla_benefits": "Pneumatiques haute performance optimisés pour l'autonomie et le silence des véhicules électriques.",
-    "club_benefits": "Soutien financier  et dotation en matériel/goodies pour les événements du club.",
+    "tesla_benefits": "Michelin est l’un des leaders mondiaux du pneumatique et de la mobilité durable. Forte de plus de 130 ans d’innovation, la marque française développe des solutions reconnues pour leurs performances, leur sécurité et leur longévité, aussi bien pour les véhicules thermiques qu’électriques",
+    "club_benefits": "Partenaire historique de Tesla, Michelin développe des pneumatiques spécifiques homologués Tesla depuis la Model S en première monte d’origine. Ces pneus répondent à un cahier des charges adapté aux caractéristiques des véhicules électriques de la marque : couple instantané, poids des batteries, rendement énergétique et confort acoustique.",
     "description": "Leader mondial du pneumatique, Michelin accompagne le Tesla Owners Club France depuis ses débuts en proposant des solutions innovantes adaptées aux véhicules électriques."
   },
   {
@@ -17,8 +17,8 @@
     "website": "https://www.albax.fr/",
     "category": "Garage",
     "sponsor_level": "Advanced",
-    "tesla_benefits": "Carrosserie de prestige, Tesla Approved Bodyshop, spécialiste de la restauration de véhicules haut de gamme.",
-    "club_benefits": "Partenariat historique et expertise technique pour les membres du club.",
+    "tesla_benefits": "",
+    "club_benefits": "",
     "description": "Référence absolue de la carrosserie de prestige, Lecoq est un partenaire 'Tesla Approved' qui assure une qualité de réparation exceptionnelle pour votre Tesla."
   },
   {
@@ -28,8 +28,8 @@
     "website": "https://www.localease.fr/leasing-tesla/",
     "category": "Leasing",
     "sponsor_level": "Premium",
-    "tesla_benefits": "Solutions de leasing flexibles et adaptées aux véhicules Tesla.",
-    "club_benefits": "Offre exclusive sur les bornes de recharge et les loyers pour les membres.",
+    "tesla_benefits": "",
+    "club_benefits": "",
     "description": "Spécialiste du leasing pour véhicules électriques, LocaLease propose des solutions de financement sur-mesure pour faciliter l'acquisition de votre Tesla."
   },
   {
@@ -39,8 +39,8 @@
     "website": "https://www.enhauto.com/fr",
     "category": "Accessoires",
     "sponsor_level": "Premium",
-    "tesla_benefits": "Accessoires et améliorations dédiés aux véhicules Tesla.",
-    "club_benefits": "Offre de réduction supplémentaire sur l’ensemble du site enhauto.com.",
+    "tesla_benefits": "Enhance Auto est une entreprise européenne basée à Sofia, en Bulgarie, spécialisée dans le développement d’accessoires intelligents et personnalisables pour les véhicules Tesla. Connue notamment pour les S3XY Buttons, la gamme comprend également le S3XY Knob, le S3XY Strip, le S3XY Dash et d’autres solutions avancées.\nL’équipe est principalement composée d’ingénieurs logiciels et de professionnels de l’automobile, avec une forte expertise dans l’amélioration de l’expérience utilisateur Tesla grâce à des fonctionnalités innovantes et évolutives.",
+    "club_benefits": "Les solutions Enhance permettent d’ajouter des commandes physiques, des automatisations avancées et de nouvelles fonctionnalités à votre Tesla afin d’améliorer l’ergonomie et l’expérience de conduite au quotidien. Les produits développés par Enhance offrent une personnalisation poussée du véhicule et permettent d’accéder rapidement à certaines fonctions essentielles. Ils apportent également des possibilités avancées autour du freinage régénératif, du préconditionnement de la batterie et de l’automatisation intelligente de nombreuses actions du véhicule.",
     "description": "Enhance propose des accessoires et solutions d'amélioration pour les véhicules Tesla."
   },
   {
@@ -50,8 +50,8 @@
     "website": "https://eu.3wliners.com/",
     "category": "Accessoires",
     "sponsor_level": "Premium",
-    "tesla_benefits": "Tapis et protections adaptés aux véhicules Tesla.",
-    "club_benefits": "Offre négociée pour le Tesla Owners Club France.",
+    "tesla_benefits": "3W Auto Life est une marque spécialisée dans les tapis haut de gamme, développés avec une attention particulière portée à la qualité, à la durabilité et à l’intégration parfaite dans les véhicules. Tesla a été l’un des premiers constructeurs pour lesquels la marque a conçu des produits spécifiques, et 3W propose aujourd’hui une large gamme d’équipements dédiés aux différents modèles Tesla.",
+    "club_benefits": "Les solutions 3W Auto Life permettent de protéger efficacement l’ensemble des espaces de rangement de votre Tesla ainsi que le dos des sièges, avec des produits parfaitement ajustés aux dimensions du véhicule. Les tapis s’adaptent aux saisons, permettant de passer facilement d’une protection hiver robuste à des moquettes épaisses, qualitatives et plus premium que les tapis d'origine.\n",
     "description": "3W propose des tapis et protections intérieures conçus pour protéger et équiper les véhicules Tesla."
   }
 ]
