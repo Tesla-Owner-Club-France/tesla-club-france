@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { Container, Card, CardContent, Badge } from "@/components/ui";
 import { getSponsors } from "@/lib/data/sponsors";
-import type {Partner, Sponsor, SponsorLevel} from "@/types";
+import type {Sponsor, SponsorLevel} from "@/types";
 import Image from "next/image";
 
 export default function SponsorsPage() {
@@ -25,6 +25,10 @@ export default function SponsorsPage() {
     
     return groups;
   }, [sponsors]);
+
+  groupedSponsors.Premium.sort((a, b) => a.name.localeCompare(b.name));
+  groupedSponsors.Advanced.sort((a, b) => a.name.localeCompare(b.name));
+  groupedSponsors.None.sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="min-h-screen bg-surface py-12">
@@ -144,7 +148,7 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
               {/* Club Benefits */}
               <div>
                 <h4 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <span className="text-secondary">🤝</span> Avantage Club
+                  <span className="text-secondary">🤝</span> Avantage adhérent
                 </h4>
                 <p className="text-text-primary leading-relaxed">
                   {sponsor.clubBenefits  || "Soutien privilégié aux activités du club."}
