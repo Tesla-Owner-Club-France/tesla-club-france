@@ -45,7 +45,7 @@
   },
   {
     "id": "a5e6c2d1-9d4a-4f25-9f2c-1c7e8b6a4d30",
-    "name": "3W",
+    "name": "3W Auto-Life",
     "logo": "true",
     "website": "https://eu.3wliners.com/",
     "category": "Accessoires",
@@ -53,5 +53,82 @@
     "tesla_benefits": "3W Auto Life est une marque spécialisée dans les tapis haut de gamme, développés avec une attention particulière portée à la qualité, à la durabilité et à l’intégration parfaite dans les véhicules. Tesla a été l’un des premiers constructeurs pour lesquels la marque a conçu des produits spécifiques, et 3W propose aujourd’hui une large gamme d’équipements dédiés aux différents modèles Tesla.",
     "club_benefits": "Les solutions 3W Auto Life permettent de protéger efficacement l’ensemble des espaces de rangement de votre Tesla ainsi que le dos des sièges, avec des produits parfaitement ajustés aux dimensions du véhicule. Les tapis s’adaptent aux saisons, permettant de passer facilement d’une protection hiver robuste à des moquettes épaisses, qualitatives et plus premium que les tapis d'origine.\n",
     "description": "3W propose des tapis et protections intérieures conçus pour protéger et équiper les véhicules Tesla."
+  },
+  {
+    "id": "0c2288bf-4fce-4e09-89e7-854a1a1c4d25",
+    "name": "Drive Elec",
+    "logo": "true",
+    "website": "https://drive-elec.com/?utm_source=club-tesla",
+    "category": "Accessoires",
+    "sponsor_level": "Premium",
+    "tesla_benefits": "Drive Elec est un partenaire historique du Tesla Owners Club France, spécialisé dans les solutions d’assurance et de services dédiés aux véhicules électriques. La marque a été créée par deux agents Allianz basés en région Auvergne-Rhône-Alpes, passionnés par l’électromobilité et convaincus de la nécessité de proposer des solutions adaptées aux nouveaux usages des conducteurs de véhicules électriques.\nReconnue pour son expertise dans ce domaine, Drive Elec accompagne de nombreux propriétaires de Tesla avec une approche pensée spécifiquement pour les besoins de la mobilité électrique.",
+    "club_benefits": "Drive Elec propose une couverture pensée spécifiquement pour les Tesla et les véhicules électriques, en prenant en compte leurs usages et équipements particuliers. Les contrats permettent notamment une prise en charge complète du véhicule avec un rapatriement sans limite de kilomètre vers un Service Center Tesla en cas de besoin. Les accessoires de recharge sont également couverts, tout comme le bris de glace incluant le toit panoramique. L’assurance intègre aussi des garanties adaptées aux nouveaux usages des propriétaires de Tesla, comme l’assurance piste incluse ou encore la couverture du vol sans effraction, correspondant aux nouvelles méthodes de vol des biens laissés dans le véhicule.",
+    "description": ""
+  },
+  {
+    "id": "18daf7fe-7a8b-481f-b40c-d2dfcc55c31b",
+    "name": "Urban COD",
+    "logo": "true",
+    "website": "https://www.urban-cod.com/",
+    "category": "Accessoires",
+    "sponsor_level": "Premium",
+    "tesla_benefits": "",
+    "club_benefits": "",
+    "description": ""
+  },
+  {
+    "id": "37c22ba1-80d8-47ba-9f1b-b2ed2a3c0b6c",
+    "name": "Green drive",
+    "logo": "true",
+    "website": "https://www.greendrive-accessories.com/fr/",
+    "category": "Accessoires",
+    "sponsor_level": "Premium",
+    "tesla_benefits": "Green Drive est un partenaire historique du Tesla Owners Club France et une référence française dans l’univers des accessoires dédiés aux véhicules Tesla. Reconnue par la communauté Tesla pour son expertise, la qualité de ses produits et son sérieux, l’entreprise propose une large gamme de solutions spécialement conçues pour les différents modèles de la marque, avec un véritable stock basé en France permettant une disponibilité rapide et un suivi de proximité apprécié par les propriétaires.",
+    "club_benefits": "Green Drive propose des solutions permettant de protéger, personnaliser et améliorer votre Tesla avec des produits conçus spécifiquement pour les différents modèles de la marque. L’entreprise sélectionne des équipements adaptés aux usages réels des propriétaires, qu’il s’agisse de protection intérieure et extérieure, de confort, de transport, de recharge ou encore d’optimisation esthétique du véhicule. L’objectif est de conserver un niveau de finition élevé tout en améliorant l’utilisation quotidienne de votre Tesla.",
+    "description": ""
+  },
+  {
+    "id": "2f93d688-a2ba-4a06-b02f-02dc706737dc",
+    "name": "Hexis",
+    "logo": "true",
+    "website": "https://www.bodyfence.net/fr/",
+    "category": "Accessoires",
+    "sponsor_level": "Premium",
+    "tesla_benefits": "",
+    "club_benefits": "",
+    "description": ""
+  },
+  {
+    "id": "6f694722-81cf-4f17-9e49-11e5ad93f00f",
+    "name": "SwissLife Valdahon",
+    "logo": "true",
+    "website": "https://swisslife-valdahon.my.canva.site/",
+    "category": "Accessoires",
+    "sponsor_level": "Premium",
+    "tesla_benefits": "",
+    "club_benefits": "",
+    "description": ""
+  },
+  {
+    "id": "c2b2c888-bfb5-432a-ba6f-af3376daeb33",
+    "name": "&Charge",
+    "logo": "true",
+    "website": "https://www.urban-cod.com/",
+    "category": "Accessoires",
+    "sponsor_level": "Premium",
+    "tesla_benefits": "",
+    "club_benefits": "",
+    "description": ""
+  },
+  {
+    "id": "563e2c68-4709-4266-998b-847e00fc2c45",
+    "name": "France Pare-brise",
+    "logo": "true",
+    "website": "https://www.urban-cod.com/",
+    "category": "Accessoires",
+    "sponsor_level": "Premium",
+    "tesla_benefits": "",
+    "club_benefits": "",
+    "description": ""
   }
 ]
