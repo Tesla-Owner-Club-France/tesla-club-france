@@ -130,7 +130,7 @@ class CsvData:
 class CsvConverter:
     def __init__(self, file_path, old_json_array : OldJsonData):
         self.file_path = file_path
-        self.data = []
+        self.data =  []
         self.jsonArray = JsonArray()
         self.oldJsonArray = old_json_array
 
@@ -174,6 +174,17 @@ class CsvConverter:
             i += 1
         self.jsonArray.createJson()
 
+    def removeEndContract(self):
+        for line in self.data:
+            name = line.nom
+            if line.typeConvention == 'Perte / fin de contrat':
+                self.data.remove(line)
+
+                # Remove in old data
+                json_data = self.jsonArray.findElement(name)
+                if json_data is not None:
+                    self.jsonArray.remove(json_data)
+
 
 def check_file_exist(file_path):
     if not os.path.exists(file_path):
@@ -212,4 +223,5 @@ if __name__ == '__main__':
 
     csvConverter = CsvConverter(csvPath, oldJsonData)
     csvConverter.importCSV()
+    csvConverter.removeEndContract()
     csvConverter.convertToJson()
