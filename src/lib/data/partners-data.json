@@ -1,5 +1,33 @@
 [
   {
+    "id": "3d6748a6-be88-4d5b-a67f-b981e7cf125f",
+    "name": "Mc Donals Carcassonne",
+    "logo": null,
+    "phone": "0627568533",
+    "website": "",
+    "address": "",
+    "city": "",
+    "postal_code": "",
+    "country": "",
+    "category": "",
+    "members_benefits": "",
+    "benefits_conditions": ""
+  },
+  {
+    "id": "10116f84-b040-499b-b00f-137e660fe828",
+    "name": "Youth Detailling",
+    "logo": null,
+    "phone": "",
+    "website": "",
+    "address": "",
+    "city": "",
+    "postal_code": "",
+    "country": "",
+    "category": "",
+    "members_benefits": "",
+    "benefits_conditions": ""
+  },
+  {
     "id": "101a62c8-9b53-4221-bbfb-d33babf579c5",
     "name": "Michelin",
     "logo": "true",
@@ -10,7 +38,7 @@
     "postal_code": "",
     "country": "",
     "category": "Pneumatique",
-    "members_benefits": "Michelin s’engage, sur toute la durée de la présente convention, à verser une somme\nde 10 000€ HT permettant la mise à disposition de matériel (flamme, stand, banderole, etc…) ainsi\nqu’une dotation en goodies pour leurs principaux événements",
+    "members_benefits": "Michelin s’engage, sur toute la durée de la présente convention, à la mise à disposition de matériel (flamme, stand, banderole, etc…) ainsi qu’une dotation en goodies pour leurs principaux événements",
     "benefits_conditions": ""
   },
   {
@@ -60,22 +88,6 @@
     "benefits_conditions": "Présentation de la carte de membre",
     "latitude": 48.6782675,
     "longitude": 2.3384686
-  },
-  {
-    "id": "a1d1f4e3-316a-4e87-a104-fc84d7c3a31d",
-    "name": "Detail-ion",
-    "logo": "false",
-    "phone": "0672570373",
-    "website": "https://www.detail-ion.fr/",
-    "address": "373 Chemin des Gypières",
-    "city": "Auriol",
-    "postal_code": "13390",
-    "country": "France",
-    "category": "Detailing",
-    "members_benefits": "10% de réduction\n20% de réduction pour les 3 premiers mois de lancement (jusque fin août)",
-    "benefits_conditions": "Présentation de la carte de membre",
-    "latitude": 43.3633648,
-    "longitude": 5.6160978
   },
   {
     "id": "c67e1e3e-e8a4-45e1-ab50-c9b28cee4531",
@@ -1238,22 +1250,6 @@
     "longitude": 5.07498
   },
   {
-    "id": "d311938f-7a2d-4864-b9e9-99e06c75f934",
-    "name": "Auto Wash 44",
-    "logo": "false",
-    "phone": "",
-    "website": "www.autowash44.com",
-    "address": "Rue des Chaintres",
-    "city": "Indre",
-    "postal_code": "44610",
-    "country": "France",
-    "category": "Detailing",
-    "members_benefits": "10 % de remise sur toutes les prestations",
-    "benefits_conditions": "Présentation de la carte de membre",
-    "latitude": 47.1975077,
-    "longitude": -1.6592547
-  },
-  {
     "id": "88d0cc8f-428b-44f6-8a89-4e84f57aad14",
     "name": "Bio Net Cars",
     "logo": "true",
@@ -1332,22 +1328,6 @@
     "benefits_conditions": "Présentation de la carte de membre",
     "latitude": 46.0761848,
     "longitude": 6.3011258
-  },
-  {
-    "id": "bf497da3-6d85-4866-b5a5-4fc686250e8e",
-    "name": "Chargemap",
-    "logo": "true",
-    "phone": "+33642875914",
-    "website": "https://fr.chargemap.com",
-    "address": "7 Allée Cérès",
-    "city": "Strasbourg",
-    "postal_code": "67200",
-    "country": "France",
-    "category": "Recharge",
-    "members_benefits": "25 % de réduction sur la carte chargemap, un code unique sera attribué aux adhérents",
-    "benefits_conditions": "utilisation du code sur le site Chargemap",
-    "latitude": 48.5944236,
-    "longitude": 7.7141896
   },
   {
     "id": "c30fec69-f1e5-403e-b4c2-ec8889b38b1e",
@@ -1796,20 +1776,6 @@
     "longitude": -0.6674668
   },
   {
-    "id": "a0d37258-8287-4d58-a80e-c1bfe5be577e",
-    "name": "Xpel",
-    "logo": "true",
-    "phone": "+33699418911",
-    "website": "https://xpel.fr/",
-    "address": "Henri Blomjousstraat 10",
-    "city": "Tilburg",
-    "postal_code": "5048 AG",
-    "country": "Netherland",
-    "category": "Detailing",
-    "members_benefits": "• 10% de remise sur la pose de film PPF dans le réseau des poseurs agréés Xpel. \n • 15% de remise sur la pose de film sur vitrage dans le réseau des poseurs agréés Xpel",
-    "benefits_conditions": "Présentation de sa carte de membre"
-  },
-  {
     "id": "61e2b3c9-7217-4863-90f6-affc02fb7bb2",
     "name": "Mister EV",
     "logo": "true",
@@ -1920,6 +1886,22 @@
     "benefits_conditions": "Présentation de la carte de membre",
     "latitude": 43.9353185,
     "longitude": 4.9005884
+  },
+  {
+    "id": "bc11138a-a26f-48b9-b260-a165880d6b6b",
+    "name": "Allo",
+    "logo": null,
+    "phone": "0667435415",
+    "website": "https://www.allo-informatique.fr/",
+    "address": "64 Av. Antoine de Pons",
+    "city": "Bollène",
+    "postal_code": "84500",
+    "country": "France",
+    "category": "",
+    "members_benefits": "",
+    "benefits_conditions": "",
+    "latitude": "44.2768923",
+    "longitude": "4.7458635"
   },
   {
     "id": "0812e91e-8f45-4eab-9cb6-0ef35fc2416c",
@@ -2034,6 +2016,20 @@
     "longitude": 2.3082404
   },
   {
+    "id": "907d8a6c-e884-4958-a953-d6dc22ce0a6e",
+    "name": "&Charge",
+    "logo": null,
+    "phone": "",
+    "website": "",
+    "address": "",
+    "city": "",
+    "postal_code": "",
+    "country": "",
+    "category": "",
+    "members_benefits": "",
+    "benefits_conditions": ""
+  },
+  {
     "id": "de3fe034-85e6-4710-b2dd-861905d231ae",
     "name": "Everyprint S.L",
     "logo": "false",
@@ -2050,20 +2046,18 @@
     "longitude": 2.192704
   },
   {
-    "id": "cbace074-fcd2-4552-b507-ffbe167a8ed1",
-    "name": "Glastint",
-    "logo": "true",
-    "phone": "+377 93 25 82 00",
-    "website": "https://www.glastint.com/partenariat-tesla-owners-france/",
-    "address": "4 rue Joseph Bressan",
-    "city": "Monaco",
-    "postal_code": "98000",
-    "country": "Monaco",
-    "category": "Detailing",
-    "members_benefits": "https://www.glastint.com/partenariat-tesla-owners-france/",
-    "benefits_conditions": "carte ou facture adhesion",
-    "latitude": 43.7321135,
-    "longitude": 7.4155024
+    "id": "831f63e4-88be-49cf-a884-07dd90416e96",
+    "name": "ULYS",
+    "logo": null,
+    "phone": "",
+    "website": "",
+    "address": "",
+    "city": "",
+    "postal_code": "",
+    "country": "",
+    "category": "",
+    "members_benefits": "",
+    "benefits_conditions": ""
   },
   {
     "id": "51f13535-a328-4d0a-ad33-f974c6a841bc",
@@ -2094,20 +2088,6 @@
     "benefits_conditions": "carte",
     "latitude": 49.4925773,
     "longitude": 0.1250681
-  },
-  {
-    "id": "e877ed84-603b-47ff-b387-cf109b34b7d9",
-    "name": "KONI",
-    "logo": "true",
-    "phone": "+33 6 70 46 46 08",
-    "website": "www.koni.fr",
-    "address": "885 avenue du docteur Julien Lefebvre",
-    "city": "Villeneuve Loube",
-    "postal_code": "06270",
-    "country": "France",
-    "category": "Garage",
-    "members_benefits": "Stéphane DUCREAU - +33 6 70 46 46 08",
-    "benefits_conditions": ""
   },
   {
     "id": "51fa7a0f-c8ad-4ca6-ba86-14ae8e2e0f51",
@@ -2252,5 +2232,95 @@
     "benefits_conditions": "présentation justification TOCF",
     "latitude": 43.455613,
     "longitude": 5.4710661
+  },
+  {
+    "id": "61455f43-3f4e-4588-8200-38793a06ed1d",
+    "name": "Les Couvreurs Occitans",
+    "logo": null,
+    "phone": "06 36 49 62 91",
+    "website": "https://photovoltaique.couvreurs-occitans.fr/",
+    "address": "15 Rue Boudeville",
+    "city": "TOULOUSE",
+    "postal_code": "31100",
+    "country": "France",
+    "category": "Photovoltaïque",
+    "members_benefits": "●\tUne offre très avantageuse sur une installation photovoltaïque de 10 kWc + batterie Tesla Powerwall 3 \n●\tUn avantage exclusif supplémentaire de 500 €",
+    "benefits_conditions": "présentation du badge",
+    "latitude": "43.5498619",
+    "longitude": "1.3970500"
+  },
+  {
+    "id": "3c74a36f-6d5c-4ae9-affa-4e88c6c5f50b",
+    "name": "OL Detailing (Maniac Auto-Detailing Center)",
+    "logo": null,
+    "phone": "07 67 27 90 94",
+    "website": "https://maniac-autodetailing.fr",
+    "address": "5 rue Charlie Chaplin",
+    "city": "Bois d’Arcy",
+    "postal_code": "78390",
+    "country": "France",
+    "category": "Detailing",
+    "members_benefits": "• Pour toute formule “V1” traitement véhicule neuf, l’option traitement des surfaces vitrées est offerte (valeur commerciale de 160€ HT).\n\n• Pour tout PPF Pack 2 (Bloc Av), le tarif sera remis de 100€ HT sur le tarif affiché.\n\n• Pour tout PPF Pack 3 (Full), le tarif en film Premium sera remis de 250€ HT.",
+    "benefits_conditions": "présentation carte de membre",
+    "latitude": "48.7993594",
+    "longitude": "2.0143740"
+  },
+  {
+    "id": "2160b006-8497-41f1-ad9c-4232b7329d3a",
+    "name": "Maniac Auto",
+    "logo": null,
+    "phone": "07 67 65 48 55",
+    "website": "https://www.maniac-auto.com/fr/",
+    "address": "3 rue Charlie Chaplin",
+    "city": "Bois d’Arcy",
+    "postal_code": "78390",
+    "country": "France",
+    "category": "Vente de produit d'entretien esthétiques pour voiture",
+    "members_benefits": "● 5% de remise sur toutes les commandes réalisées par les adhérents du\nclub sur le site maniac-auto.com avec le code de réduction TESLAOC\n● Des journées exclusives de découverte du detailing",
+    "benefits_conditions": "",
+    "latitude": "48.8004880",
+    "longitude": "2.0142120"
+  },
+  {
+    "id": "e48cc1cc-04cc-457e-8130-f3eb03fd0686",
+    "name": "3W Auto Accesory",
+    "logo": null,
+    "phone": "",
+    "website": "https://eu.3wliners.com/",
+    "address": "Unit 17, Alston Drive, Bradwell Abbey",
+    "city": "Milton Keynes",
+    "postal_code": "MK13 9HA",
+    "country": "UK",
+    "category": "Accessoires Tesla",
+    "members_benefits": "",
+    "benefits_conditions": ""
+  },
+  {
+    "id": "45446f84-a561-41e0-8e1c-56c71849c553",
+    "name": "Enhance",
+    "logo": null,
+    "phone": "",
+    "website": "",
+    "address": "",
+    "city": "",
+    "postal_code": "",
+    "country": "",
+    "category": "",
+    "members_benefits": "",
+    "benefits_conditions": ""
+  },
+  {
+    "id": "a00e3818-0649-44a9-8f2c-9d1f8e3751f0",
+    "name": "Bright Car Cover",
+    "logo": null,
+    "phone": "0627343346",
+    "website": "https://www.brightcarcover.com/",
+    "address": "Zone d'activité de fontvielle, lot D6",
+    "city": "Allauch",
+    "postal_code": "13190",
+    "country": "France",
+    "category": "détailling",
+    "members_benefits": "- Remise de 13% sur la pose de film de protection PPF µSUNTECK Clear garantie 5 ans fabricant en pose pré-découpé\n- Restitution du véhicule nettoyé int/ext\n- Restitution du véhicule chargé\nMise à disposition d'un véhicule de prêt pour la durée de l'intervention.",
+    "benefits_conditions": ""
   }
 ]
