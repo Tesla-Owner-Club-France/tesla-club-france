@@ -1,6 +1,7 @@
 import os
 import json
-from itertools import count
+import sys
+import uuid
 
 import requests
 import time
@@ -24,8 +25,15 @@ class JsonArray:
         return res
 
     def createJson(self):
-        with open("res2.json", "w") as f:
-            f.write(json.JSONEncoder().encode(self.toJson()))
+        with open(sys.argv[2], "w") as f:
+            f.write(json.JSONEncoder(indent=2, ensure_ascii=False).encode(self.toJson()))
+
+    def findElement(self, name):
+        for element in self.data:
+            if element.name == name:
+                return element
+        return None
+
 
 class JsonData:
     def __init__(self):
@@ -45,7 +53,7 @@ class JsonData:
         self.longitude = None
 
     def toJson(self):
-        return {
+        res =  {
                 "id" : self.id,
                 "name" : self.name,
                 "logo" : self.logo,
@@ -58,9 +66,14 @@ class JsonData:
                 "category" : self.category,
                 "members_benefits" : self.members_benefits,
                 "benefits_conditions" : self.benefits_conditions,
-                "latitude" : self.latitude,
-                "longitude" : self.longitude,
+
             }
+        if self.latitude is not None:
+            res["latitude"] = self.latitude
+        if self.longitude is not None:
+            res["longitude"] = self.longitude
+        return res;
+
     def getLatitudeLongitude(self):
         if self.city != '' and self.postal_code != '':
             url = 'https://nominatim.openstreetmap.org/search'
@@ -79,7 +92,22 @@ class JsonData:
                 self.latitude = results[0]['lat']
                 self.longitude = results[0]['lon']
             time.sleep(1)
-
+    def importDataFromOldJson(self, data):
+        self.id = data['id']
+        self.name = data['name']
+        self.logo = data['logo']
+        self.phone = data['phone']
+        self.website = data['website']
+        self.address = data['address']
+        self.city = data['city']
+        self.postal_code = data['postal_code']
+        self.country = data['country']
+        self.category = data['category']
+        self.members_benefits = data['members_benefits']
+        self.benefits_conditions = data['benefits_conditions']
+        if 'latitude' in data:
+            self.latitude = data['latitude']
+            self.longitude = data['longitude']
 
 class CsvData:
     def __init__(self, data):
@@ -100,19 +128,19 @@ class CsvData:
         self.commentObtenirAvantage = data['Comment obtenir son avantage']
 
 class CsvConverter:
-    def __init__(self, file_path):
+    def __init__(self, file_path, old_json_array : OldJsonData):
         self.file_path = file_path
         self.data = []
         self.jsonArray = JsonArray()
+        self.oldJsonArray = old_json_array
 
     def importCSV(self):
         import csv
         with open(self.file_path, mode='r') as file:
             csvFile = csv.DictReader(file)
             for lines in csvFile:
-                csvData = CsvData(lines);
-                if (csvData.typeConvention == 'Partenariat basic' or csvData.typeConvention is None):
-                    self.data.append(csvData)
+                csvData = CsvData(lines)
+                self.data.append(csvData)
 
     def convertToJson(self):
         i = 1
@@ -120,25 +148,29 @@ class CsvConverter:
 
             print('Traitement : ' + str(i) + '/' + str(len(self.data)))
 
-            json : JsonData = JsonData()
-            json.id = lines.id
-            json.name = lines.nom
-            json.logo =  None;
-            json.phone = lines.tel
-            json.website = lines.url
-            json.address = lines.adresse
-            json.city = lines.ville
-            json.postal_code = lines.codePostal
-            json.country = lines.pays
-            json.category = None
-            json.members_benefits = lines.avantageAdherent
-            json.benefits_conditions = lines.commentObtenirAvantage
-            json.latitude = None
-            json.longitude = None
+            name = lines.nom
+            if self.oldJsonArray.getElementByName(name) is not None:
+                self.jsonArray.add(self.oldJsonArray.getElementByName(name))
+            else:
+                json : JsonData = JsonData()
+                json.id = str(uuid.uuid4())
+                json.name = lines.nom
+                json.logo =  None;
+                json.phone = lines.tel
+                json.website = lines.url
+                json.address = lines.adresse
+                json.city = lines.ville
+                json.postal_code = lines.codePostal
+                json.country = lines.pays
+                json.category = lines.secteurActivite
+                json.members_benefits = lines.avantageAdherent
+                json.benefits_conditions = lines.commentObtenirAvantage
+                json.latitude = None
+                json.longitude = None
 
-            json.getLatitudeLongitude()
+                json.getLatitudeLongitude()
 
-            self.jsonArray.add(json)
+                self.jsonArray.add(json)
             i += 1
         self.jsonArray.createJson()
 
@@ -148,13 +180,36 @@ def check_file_exist(file_path):
         raise FileNotFoundError(f"File not found: {file_path}")
 
 
+class OldJsonData:
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.data = []
+        self.importJSON()
+
+    def importJSON(self):
+        with open(sys.argv[2], "r") as f:
+            self.data = json.JSONDecoder().decode(f.read())
+
+    def getElementByName(self, name):
+        for lines in self.data:
+            if lines['name'] == name:
+                jsonData = JsonData()
+                jsonData.importDataFromOldJson(lines)
+                return jsonData
+        return None
+
+
+
 if __name__ == '__main__':
-    csvPath = 'Comptes_2026_05_04.csv'
-    jsonActualPath = 'partners-data.json'
+    csvPath = sys.argv[1]
+    jsonActualPath = sys.argv[2]
 
     check_file_exist(csvPath)
     check_file_exist(jsonActualPath)
 
-    csvConverter = CsvConverter(csvPath);
+
+    oldJsonData = OldJsonData(jsonActualPath)
+
+    csvConverter = CsvConverter(csvPath, oldJsonData)
     csvConverter.importCSV()
     csvConverter.convertToJson()
