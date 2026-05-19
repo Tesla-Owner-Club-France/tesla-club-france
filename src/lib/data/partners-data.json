@@ -195,7 +195,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "Réduction de 10% en présentant la carte de membre",
-    "benefits_conditions": "Présenter sa carte de membre\nEn cas de paiement en ligne, utiliser le code TESLASC21",
+    "benefits_conditions": "Présenter sa carte de membre\nEn cas de paiement en ligne, utiliser le code envoyé par mail ou demandez à votre responsible régional",
     "latitude": 47.5275161,
     "longitude": -2.7684537
   },
@@ -527,7 +527,7 @@
     "country": "France",
     "category": "Detailing",
     "members_benefits": "15% de réduction sur chaque prestations effectuées (polissage, lustrage, débosselage sans peinture, vente de produits et accessoires d'entretien, traitement céramique....) formation journée detailing\nle 07 nettoyant vitres Distinctive Auto offert pour toute prestation réalisée\n15% sur tous les produits de la boutique\nPossibilité d'organiser des événements au centre",
-    "benefits_conditions": "Présentation de la carte de membre\nCode promotionnel TOCF15 pour la boutique",
+    "benefits_conditions": "Présentation de la carte de membre\nCode promotionnel code envoyé par mail ou demandez à votre responsible régional pour la boutique",
     "latitude": 44.0784831,
     "longitude": 6.0204621
   },
@@ -829,7 +829,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "20% sur les coffretts cadeaux\nApéritif offert pour séminaire et évènements\n20% sur les Vins Bio",
-    "benefits_conditions": "Code catalogue ici :\nhttps://drive.google.com/file/d/1Qfq6gui0nwve4Q8lX4GPFQ-N9PMtfG_0/view?usp=sharing",
+    "benefits_conditions": "",
     "latitude": 43.6350426,
     "longitude": 5.4231827
   },
@@ -909,7 +909,7 @@
     "country": "France",
     "category": "Detailing",
     "members_benefits": "10% sur le site produits phoenix\nRemise 10% sur le site avec le code TM3\nFrais de ports gratuit a partir de 60 euro\n25 % prestations detailling",
-    "benefits_conditions": "se connectant sur le site \nmettre le code TM3/ presenter la carte membre\nprendre contact www.facebook.com/cleaningdistrict",
+    "benefits_conditions": "se connectant sur le site \nmettre le code envoyé par mail ou demandé à votre responsible régional/ presenter la carte membre\nprendre contact www.facebook.com/cleaningdistrict",
     "latitude": 49.8160286,
     "longitude": 2.8023348
   },
