@@ -195,7 +195,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "Réduction de 10% en présentant la carte de membre",
-    "benefits_conditions": "Présenter sa carte de membre\nEn cas de paiement en ligne, utiliser le code TESLASC21",
+    "benefits_conditions": "Présenter sa carte de membre\nEn cas de paiement en ligne, utiliser le code envoyé par mail ou demandez à votre responsible régional",
     "latitude": 47.5275161,
     "longitude": -2.7684537
   },
@@ -527,7 +527,7 @@
     "country": "France",
     "category": "Detailing",
     "members_benefits": "15% de réduction sur chaque prestations effectuées (polissage, lustrage, débosselage sans peinture, vente de produits et accessoires d'entretien, traitement céramique....) formation journée detailing\nle 07 nettoyant vitres Distinctive Auto offert pour toute prestation réalisée\n15% sur tous les produits de la boutique\nPossibilité d'organiser des événements au centre",
-    "benefits_conditions": "Présentation de la carte de membre\nCode promotionnel TOCF15 pour la boutique",
+    "benefits_conditions": "Présentation de la carte de membre\nCode promotionnel code envoyé par mail ou demandez à votre responsible régional pour la boutique",
     "latitude": 44.0784831,
     "longitude": 6.0204621
   },
@@ -829,7 +829,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "20% sur les coffretts cadeaux\nApéritif offert pour séminaire et évènements\n20% sur les Vins Bio",
-    "benefits_conditions": "Code catalogue ici :\nhttps://drive.google.com/file/d/1Qfq6gui0nwve4Q8lX4GPFQ-N9PMtfG_0/view?usp=sharing",
+    "benefits_conditions": "",
     "latitude": 43.6350426,
     "longitude": 5.4231827
   },
@@ -909,7 +909,7 @@
     "country": "France",
     "category": "Detailing",
     "members_benefits": "10% sur le site produits phoenix\nRemise 10% sur le site avec le code TM3\nFrais de ports gratuit a partir de 60 euro\n25 % prestations detailling",
-    "benefits_conditions": "se connectant sur le site \nmettre le code TM3/ presenter la carte membre\nprendre contact www.facebook.com/cleaningdistrict",
+    "benefits_conditions": "se connectant sur le site \nmettre le code envoyé par mail ou demandé à votre responsible régional/ presenter la carte membre\nprendre contact www.facebook.com/cleaningdistrict",
     "latitude": 49.8160286,
     "longitude": 2.8023348
   },
@@ -1005,7 +1005,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur",
-    "benefits_conditions": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur avec le code CLUBTESLA10",
+    "benefits_conditions": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur avec le code envoyé par mail ou demandez à votre responsible régional",
     "latitude": 47.2186371,
     "longitude": -1.5541362
   },
@@ -1021,7 +1021,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur",
-    "benefits_conditions": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur avec le code CLUBTESLA10",
+    "benefits_conditions": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur avec le code envoyé par mail ou demandez à votre responsible régional",
     "latitude": 44.841225,
     "longitude": -0.5800364
   },
@@ -1037,7 +1037,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur",
-    "benefits_conditions": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur avec le code CLUBTESLA10",
+    "benefits_conditions": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur avec le code envoyé par mail ou demandez à votre responsible régional",
     "latitude": 48.1113387,
     "longitude": -1.6800198
   },
@@ -1053,7 +1053,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur",
-    "benefits_conditions": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur avec le code CLUBTESLA10",
+    "benefits_conditions": "Une remise de 10% sur tous les jeux d’escape game en intérieur ou extérieur avec le code envoyé par mail ou demandez à votre responsible régional",
     "latitude": 45.5662672,
     "longitude": 5.9203636
   },
@@ -1643,7 +1643,7 @@
     "country": "France",
     "category": "Recharge",
     "members_benefits": "- 20% pendant les 3 premiers mois sur l’abonnement",
-    "benefits_conditions": "Code promo : TeslaOwnerClubFrance",
+    "benefits_conditions": "Code promo envoyé par mail ou à demander à votre responsible régional",
     "latitude": 48.8504867,
     "longitude": 2.6040358
   },
@@ -1739,7 +1739,7 @@
     "country": "France",
     "category": "Tourisme",
     "members_benefits": "-10% sur tous les vins sur présentation de la carte de membre. Saint Émilion grand cru",
-    "benefits_conditions": "Présentation de sa carte d'adherent",
+    "benefits_conditions": "Présentation de sa carte d'adhèrent",
     "latitude": 44.9297026,
     "longitude": -0.1034537
   },
@@ -2212,7 +2212,7 @@
     "postal_code": "77164",
     "country": "France",
     "category": "Garage",
-    "members_benefits": "- Remise expulsive de 10% sur la main d'œuvre avec code promo EVTECH10 sur réparation et entretien\n- Forfait filtre habitable et essuie-glaces pour 3 et Y à 49,99 € TTC\n- Check-up du train roulant offert sur S et X. contrôle visuel des éléments de suspension, direction et liaison au sol.",
+    "members_benefits": "- Remise expulsive de 10% sur la main d'œuvre avec le code promo envoyé par mail ou à demander à votre responsible régional sur réparation et entretien\n- Forfait filtre habitable et essuie-glaces pour 3 et Y à 49,99 € TTC\n- Check-up du train roulant offert sur S et X. contrôle visuel des éléments de suspension, direction et liaison au sol.",
     "benefits_conditions": "sur présentation d'un justificatif adhésion valide",
     "latitude": 48.823005418685085,
     "longitude": 2.721279543706491
