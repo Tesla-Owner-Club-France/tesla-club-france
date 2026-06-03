@@ -56,14 +56,14 @@
   },
   {
     "id": "0c2288bf-4fce-4e09-89e7-854a1a1c4d25",
-    "name": "Drive Elec",
+    "name": "Drive-Elec",
     "logo": "true",
     "website": "https://drive-elec.com/?utm_source=club-tesla",
     "category": "Accessoires",
     "sponsor_level": "Premium",
-    "tesla_benefits": "Drive Elec propose une couverture pensée spécifiquement pour les Tesla et les véhicules électriques, en prenant en compte leurs usages et équipements particuliers. Les contrats permettent notamment une prise en charge complète du véhicule avec un rapatriement sans limite de kilomètre vers un Service Center Tesla en cas de besoin. Les accessoires de recharge sont également couverts, tout comme le bris de glace incluant le toit panoramique. L’assurance intègre aussi des garanties adaptées aux nouveaux usages des propriétaires de Tesla, comme l’assurance piste incluse ou encore la couverture du vol sans effraction, correspondant aux nouvelles méthodes de vol des biens laissés dans le véhicule.",
+    "tesla_benefits": "Drive Elec propose une couverture pensée spécifiquement pour les Tesla et les véhicules électriques, en prenant en compte leurs usages et équipements particuliers.\n Les contrats permettent notamment une prise en charge complète du véhicule avec un rapatriement sans limite de kilomètre vers un Service Center Tesla en cas de besoin. Les accessoires de recharge sont également couverts, tout comme le bris de glace incluant le toit panoramique. L’assurance intègre aussi des garanties adaptées aux nouveaux usages des propriétaires de Tesla, comme l’assurance piste incluse ou encore la couverture du vol sans effraction, correspondant aux nouvelles méthodes de vol des biens laissés dans le véhicule.",
     "club_benefits": "Les adhérents du Tesla Owners Club France bénéficient de 2 mois offerts sur leur contrat d’assurance Drive Elec. Le partenariat inclut également l’adhésion TOCF offerte la première année, à hauteur de 40 €.",
-    "description": "Drive Elec est un partenaire historique du Tesla Owners Club France, spécialisé dans les solutions d’assurance et de services dédiés aux véhicules électriques. La marque a été créée par deux agents Allianz basés en région Auvergne-Rhône-Alpes, passionnés par l’électromobilité et convaincus de la nécessité de proposer des solutions adaptées aux nouveaux usages des conducteurs de véhicules électriques.\nReconnue pour son expertise dans ce domaine, Drive Elec accompagne de nombreux propriétaires de Tesla avec une approche pensée spécifiquement pour les besoins de la mobilité électrique."
+    "description": "Partenaire historique du Tesla Owners Club France, Drive-Elec est un spécialiste de l’assurance des véhicules électriques. Créée en 2019 par deux agents Allianz, la marque accompagne les conducteurs de Tesla avec des solutions adaptées aux nouveaux usages de l’électromobilité. Née à une période où ce marché était encore émergent, Drive-Elec a développé une expertise reconnue et accompagne aujourd’hui de nombreux propriétaires de Tesla partout en France, avec une approche pensée spécifiquement pour les besoins de la mobilité électrique."
   },
   {
     "id": "18daf7fe-7a8b-481f-b40c-d2dfcc55c31b",
@@ -117,7 +117,7 @@
     "category": "Accessoires",
     "sponsor_level": "Premium",
     "tesla_benefits": "&Charge permet aux propriétaires de Tesla d’optimiser leur expérience de recharge grâce à une plateforme communautaire collaborative. Les utilisateurs peuvent partager leurs avis sur les bornes, signaler des informations utiles et accumuler des récompenses convertibles en kilomètres de recharge auprès de différents réseaux partenaires.",
-    "club_benefits": "&Charge accompagne les événements du Tesla Owners Club France tout au long de l’année avec des dotations permettant de faire gagner des kilomètres de recharge aux adhérents. La plateforme soutient également différentes animations communautaires autour de la recharge et de la mobilité électrique afin de récompenser l’engagement des membres du club.",
+    "club_benefits": "&Charge accompagne les événements du Tesla Owners Club France tout au long de l’année avec des dotations permettant de faire gagner des kilomètres de recharge aux adhérents. Le code d'invitation \"TOCF\" permet de béficier d'un crédit de départ de 20km. La plateforme soutient également différentes animations communautaires autour de la recharge et de la mobilité électrique afin de récompenser l’engagement des membres du club.",
     "description": "&Charge est une plateforme communautaire dédiée à la recharge des véhicules électriques. L’entreprise permet aux conducteurs de partager leurs expériences sur les infrastructures de recharge, de contribuer à l’amélioration de l’écosystème et d’être récompensés pour leur engagement. &Charge accompagne la communauté Tesla autour des enjeux liés à la recharge et à la mobilité électrique au quotidien."
   },
   {
