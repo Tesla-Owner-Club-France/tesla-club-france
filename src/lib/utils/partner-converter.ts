@@ -1,4 +1,4 @@
-import {getCategoryCode, Partner} from "@/types";
+import {getCategoryCode} from "@/types";
 import {v4 as uuidv4} from "uuid";
 
 export interface CsvRow {
@@ -19,6 +19,21 @@ export interface CsvRow {
     "Comment obtenir son avantage": string;
 }
 
+export interface JsonPartners {
+    id: string;
+    name: string;
+    logo: boolean | null;
+    phone: string;
+    website: string;
+    address: string;
+    city: string;
+    postal_code: string;
+    country: string;
+    category: string;
+    members_benefits: string;
+    benefits_conditions: string;
+}
+
 export async function geocode(address: string, city: string, postalCode: string, country: string) {
     try {
         const params = new URLSearchParams({
@@ -35,7 +50,9 @@ export async function geocode(address: string, city: string, postalCode: string,
             },
         });
 
-        if (!response.ok) return null;
+        if (!response.ok) {
+            return null;
+        }
 
         const data = await response.json();
         if (data && data.length > 0) {
@@ -52,9 +69,9 @@ export async function geocode(address: string, city: string, postalCode: string,
 
 export async function convertCsvToPartners(
     csvData: CsvRow[],
-    existingPartners: Partner[] = []
-): Promise<Partner[]> {
-    const partners: Partner[] = [];
+    existingPartners: JsonPartners[] = []
+): Promise<JsonPartners[]> {
+    const partners: JsonPartners[] = [];
 
     for (const row of csvData) {
         // Skip finished contracts
@@ -73,25 +90,24 @@ export async function convertCsvToPartners(
         } else {
             // Create new partner
             const categoryLabel = row["Sécteur d'activité"];
-            const partner: any = {
+            const partner: JsonPartners = {
                 id: uuidv4(),
                 name: name,
+                logo: null,
+                phone: row["Téléphone"],
+                website: row["Site Web"],
                 address: row["Adresse"],
                 city: row["Ville"],
                 postal_code: row["Code postal"],
                 country: row["Pays"],
-                phone: row["Téléphone"],
-                website: row["Site Web"],
                 category: getCategoryCode(categoryLabel),
-                categoryLabel: categoryLabel,
                 members_benefits: row["Avantage(s) adherent"],
                 benefits_conditions: row["Comment obtenir son avantage"],
-                hasLogo: false,
             };
 
             // Try geocoding for new partners
-            if (partner.city && partner.postalCode) {
-                const coords = await geocode(partner.address, partner.city, partner.postalCode, partner.country);
+            if (partner.city && partner.postal_code) {
+                const coords = await geocode(partner.address, partner.city, partner.postal_code, partner.country);
                 if (coords) {
                     partner.latitude = coords.lat;
                     partner.longitude = coords.lon;
