@@ -81,16 +81,17 @@ export async function convertCsvToPartners(
 
         const name = row["Nom du Compte"];
         const existingPartner = existingPartners.find((p) => p.name === name);
+        let partner: JsonPartners;
 
         if (existingPartner) {
             // Update existing partner but keep ID and geocoding if present
-            partners.push({
+            partner = {
                 ...existingPartner
-            });
+            };
         } else {
             // Create new partner
             const categoryLabel = row["Sécteur d'activité"];
-            const partner: JsonPartners = {
+            partner = {
                 id: uuidv4(),
                 name: name,
                 logo: null,
@@ -116,9 +117,42 @@ export async function convertCsvToPartners(
                 await new Promise(resolve => setTimeout(resolve, 1000));
             }
 
-            partners.push(partner);
         }
+        partner.phone = numberFormat(partner.phone);
+        partners.push(partner);
     }
 
     return partners;
+}
+
+export function numberFormat(number: string): string {
+
+    // Remove all spaces and non-digit characters except +
+    let cleaned = number.replace(/[\s\-\.()]/g, "");
+
+    // Remove all non-digit characters except leading +
+    cleaned = cleaned.replace(/[^\d+]/g, "");
+
+    // If number starts with 0 and has 10 digits (French format)
+    if (cleaned.match(/^0\d{9}$/)) {
+        return "+33" + cleaned.substring(1);
+    }
+
+    // If number already starts with +33
+    if (cleaned.match(/^\+33\d{9}$/)) {
+        return cleaned;
+    }
+
+    // If number starts with 33 (without +)
+    if (cleaned.match(/^33\d{9}$/)) {
+        return "+" + cleaned;
+    }
+
+    // If number starts with 33 (without +)
+    if (cleaned.match(/^\d{9}$/)) {
+        return "+33" + cleaned;
+    }
+
+    return cleaned;
+
 }

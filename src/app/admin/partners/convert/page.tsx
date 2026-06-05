@@ -1,15 +1,14 @@
 "use client";
 
 import {useState} from "react";
-import {Partner} from "@/types";
-import {convertCsvToPartners, CsvRow} from "@/lib/utils/partner-converter";
+import {convertCsvToPartners, CsvRow, JsonPartners} from "@/lib/utils/partner-converter";
 import Papa from "papaparse";
 
 export default function PartnerConvertPage() {
     const [csvFile, setCsvFile] = useState<File | null>(null);
     const [jsonFile, setJsonFile] = useState<File | null>(null);
     const [isProcessing, setIsProcessing] = useState(false);
-    const [resultJson, setResultJson] = useState<Partner[] | null>(null);
+    const [resultJson, setResultJson] = useState<JsonPartners[] | null>(null);
     const [status, setStatus] = useState<string>("");
 
     const handleConvert = async () => {
@@ -22,7 +21,7 @@ export default function PartnerConvertPage() {
         setStatus("Lecture des fichiers...");
 
         try {
-            let existingPartners: Partner[] = [];
+            let existingPartners: JsonPartners[] = [];
             if (jsonFile) {
                 const jsonText = await jsonFile.text();
                 existingPartners = JSON.parse(jsonText);
