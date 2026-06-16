@@ -20,6 +20,9 @@ interface RawPartner {
   benefits_conditions: string;
   latitude?: number;
   longitude?: number;
+  sponsor_level?: string;
+  tesla_benefits?: string;
+  club_benefits?: string;
 }
 
 /**

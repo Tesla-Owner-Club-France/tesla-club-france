@@ -5,13 +5,13 @@ services:
       context: .
       target: runner
     working_dir: /app
-    command: npm start
+    command: npm run start
     ports:
       - "${PORT_WEB:-3000}:3000"
     environment:
       - NODE_ENV=production
-    volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/.next
     container_name: ${COMPOSE_PROJECT_NAME:-site-club-tesla}-site
+
+volumes:
+  web_node_modules:
+  web_cache:

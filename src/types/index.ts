@@ -21,6 +21,8 @@ export type CategoryType =
   | "convoyage"
   | "leasing";
 
+export type SponsorLevel = "Premium" | "Advanced" | "None";
+
 export interface Partner {
   id: string;
   name: string;
@@ -38,6 +40,19 @@ export interface Partner {
   // Coordonnées pour la carte (à géocoder plus tard)
   latitude?: number;
   longitude?: number;
+}
+
+export interface Sponsor {
+  id: string;
+  name: string;
+  website?: string;
+  category: CategoryType;
+  categoryLabel: string; // Label original du JSON
+  hasLogo: boolean;
+  sponsorLevel?: SponsorLevel;
+  teslaBenefits?: string; // Avantage du partenaire par rapport à Tesla
+  clubBenefits?: string;  // Avantage que propose le partenaire pour le club
+  description?: string;   // Description générale du sponsor
 }
 
 // ===== NEWS TYPES =====

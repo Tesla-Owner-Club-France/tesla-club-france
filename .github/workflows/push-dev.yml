@@ -36,7 +36,8 @@ jobs:
           APP_DIR: ${{ secrets.APP_DIR_DEV }}
         run: |
           ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
-          rsync -avzO --no-perms --delete ./ $SERVER_USER@$SERVER_IP:$APP_DIR
+          rsync -avzO --no-perms --exclude '.next' --exclude '.git' --delete ./ $SERVER_USER@$SERVER_IP:$APP_DIR
+          
 
       - name: Deploy to Server
         env:
@@ -50,7 +51,10 @@ jobs:
           cd $APP_DIR &&
           echo PORT_WEB=$APP_PORT > $APP_DIR/.env &&
           echo IMAGE_NAME=$APP_IMAGE_NAME >> $APP_DIR/.env &&
+          echo 'Building' && 
           docker compose -f compose-deploy.yaml build --no-cache && 
-          docker compose -f compose-deploy.yaml down || true && 
+          echo 'Building done' && 
+          docker compose -f compose-deploy.yaml down --remove-orphans --volumes || true  &&
+          echo 'Clear down' &&
           docker compose -f compose-deploy.yaml up -d
           "

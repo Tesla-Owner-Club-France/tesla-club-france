@@ -9,6 +9,7 @@ const MAIN_SITE_URL = "club-tesla.fr";
 const footerNavigation = {
   main: [
     { name: "Partenaires", href: "/", external: false },
+    { name: "Sponsors", href: "/sponsors", external: false },
     { name: "Actualités", href: `https://www.${MAIN_SITE_URL}/site/Actualites-70`, external: true },
     { name: "Adhésion", href: `https://www.${MAIN_SITE_URL}/site/Devenir_membre-7401`, external: true },
     { name: "Contact", href: `https://www.${MAIN_SITE_URL}/site/Contact-69`, external: true },
