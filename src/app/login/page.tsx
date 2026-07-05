@@ -9,14 +9,14 @@ export default function LoginPage() {
     const [password, setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const autorized = []
+    const authorized: any[] = []
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
         // Simuler un délai de connexion
 
-        let user = autorized.map(user => {
+        let user = authorized.map(user => {
             return user.login === email && user.password === password
         })
         setIsLoading(false);
