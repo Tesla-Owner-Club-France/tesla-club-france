@@ -1,7 +1,7 @@
 "use client";
 
-import { Badge } from "@/components/ui";
-import { getCategoryMeta, type Partner } from "@/types";
+import {Badge} from "@/components/ui";
+import {getCategoryMeta, type Partner} from "@/types";
 
 interface PartnerDetailProps {
   partner: Partner;
@@ -25,6 +25,12 @@ export function PartnerDetail({ partner, onClose, hideHeader = false }: PartnerD
     }
     return `https://${url}`;
   };
+
+  const formatPhone = (phone: string) => {
+
+
+    return phone.replace(/^(\+33)(\d)(\d{2})(\d{2})(\d{2})(\d{2})$/, "$1 $2 $3 $4 $5 $6");
+  }
 
   return (
     <div className={hideHeader ? "" : "bg-white rounded-xl border border-border overflow-hidden"}>
@@ -126,7 +132,7 @@ export function PartnerDetail({ partner, onClose, hideHeader = false }: PartnerD
               </div>
               <div>
                 <p className="text-xs text-text-muted">Téléphone</p>
-                <p className="text-sm font-medium text-text-primary">{partner.phone}</p>
+                <p className="text-sm font-medium text-text-primary">{formatPhone(partner.phone)}</p>
               </div>
             </a>
           )}
