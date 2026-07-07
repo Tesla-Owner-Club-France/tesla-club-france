@@ -32,6 +32,8 @@ export interface JsonPartners {
     category: string;
     members_benefits: string;
     benefits_conditions: string;
+    longitude: number | null;
+    latitude: number | null;
 }
 
 export async function geocode(address: string, city: string, postalCode: string, country: string) {
@@ -104,6 +106,8 @@ export async function convertCsvToPartners(
                 category: getCategoryCode(categoryLabel),
                 members_benefits: row["Avantage(s) adherent"],
                 benefits_conditions: row["Comment obtenir son avantage"],
+                latitude: null,
+                longitude: null
             };
 
             // Try geocoding for new partners
