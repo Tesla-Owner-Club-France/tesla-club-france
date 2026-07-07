@@ -12,5 +12,4 @@ services:
       - NODE_ENV=development
     volumes:
       - .:/app
-      - /app/node_modules
     container_name: ${COMPOSE_PROJECT_NAME:-site-club-tesla}-site
