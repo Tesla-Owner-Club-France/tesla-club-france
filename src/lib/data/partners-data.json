@@ -930,38 +930,6 @@
     "longitude": 5.6563762
   },
   {
-    "id": "c5c887ff-c0c8-437b-9ffa-02c1b6a8cd19",
-    "name": "Julien Estheticar",
-    "logo": "false",
-    "phone": "",
-    "website": "https://www.facebook.com/JulienEsthetiCar/",
-    "address": "41 RUE DU ZORNHOFF",
-    "city": "MONSWILLER",
-    "postal_code": "67700",
-    "country": "France",
-    "category": "Detailing",
-    "members_benefits": "10% de remise et traitement surfaces vitrees offert pour toute céramique réalisé",
-    "benefits_conditions": "Présentation de la carte de membre",
-    "latitude": 48.7508263,
-    "longitude": 7.382695
-  },
-  {
-    "id": "95f89a9e-8b13-484f-abeb-c572fc93ea36",
-    "name": "La nurserie",
-    "logo": "true",
-    "phone": "+33607181585",
-    "website": "https://www.misterbigdetailing.com/nouveau-centre-a-sundhouse-67920/",
-    "address": "1b Rue de Sarlat",
-    "city": "Sundhouse",
-    "postal_code": "67920",
-    "country": "France",
-    "category": "Detailing",
-    "members_benefits": "Pour un traitement full Graphène ou Céramique, traitement des jantes et des surfaces vitrées offert\nTraitement céramique Système X DiamonD SS Garantie 8 ans :\n- Model 3 1100€ TTC au lieu de 1590€ TTC\n- Model S 1400€ TTC au lieu de 1790€ TTC\n- Model X 1700€ TTC au lieu de 1990€ TTC\nTraitement Graphène WaxedShine GSHC Garantie 5 ans :\n- Model 3 1600€ TTC au lieu de 2200€ TTC\n- Model S 1900€ TTC au lieu de 2500€ TTC\n- Model X 2200€ TTC au lieu de 2700€ TTC\nVitres teintées :\n- Model 3 deux latéraux 200€ TTC, lunette arrière 150€ TTC au lieu de 399€ TTC\n- Model S deux latéraux 220€ TTC, lunette arrière 120€ TTC au lieu de 380€ TTC\n- Model X deux latéraux 290€ TTC, lunette arrière 120€ TTC au lieu de 470€ TTC\nNettoyage, transformations, PPF, covering, personnalisation :\n- 20% d réduction sur la main d'oeuvre \n- 10% de remise sur les pièces\nCarrosserie, réparations :\n- 20% d réduction sur la main d'oeuvre \n- 15% de remise sur les pièces\nUn véhicule de courtoisie sera mis à disposition",
-    "benefits_conditions": "Présentation de la carte de membre",
-    "latitude": 48.2494823,
-    "longitude": 7.6112529
-  },
-  {
     "id": "4bc5e1bf-3159-40a5-832d-1410eee814b8",
     "name": "Aquarium de Lyon",
     "logo": "true",
@@ -1360,22 +1328,6 @@
     "benefits_conditions": "Présentation de la carte de membre",
     "latitude": 47.7691812,
     "longitude": 7.3307774
-  },
-  {
-    "id": "022ad430-e776-434c-a46e-7a58f5855933",
-    "name": "Autoclean Vap - Carmatic - Dogmatic",
-    "logo": "false",
-    "phone": "+33627040122",
-    "website": "https://www.autocleanvap.fr/autoclean-vap/",
-    "address": "9001 Route De La Sapinière",
-    "city": "Laxou",
-    "postal_code": "54520",
-    "country": "France",
-    "category": "Detailing",
-    "members_benefits": "●        Traitements céramique et film ppf : une mallette gtechniq offerte\n●        Car Matic et Dog Matic: Avec l'application mobile car matic, achetez des jetons virtuel et obtenez une remise en fonction des paliers d'achat. 20 jetons achetés = 5 % en plus soit 1 jeton... 30 jetons achetés = 10%",
-    "benefits_conditions": "Présentation de la carte de membre",
-    "latitude": 48.6848709,
-    "longitude": 6.1522232
   },
   {
     "id": "16354ffd-6ae0-4552-b132-448ebda141bf",
@@ -2294,5 +2246,21 @@
     "benefits_conditions": "",
     "latitude": "43.3260176532955",
     "longitude": "5.487565633753489"
+  },
+  {
+    "id": "8742a03b-d05e-4fc6-97d4-db032cd822e0",
+    "name": "Shift and Shine",
+    "logo": null,
+    "phone": "+33624302969",
+    "website": "https://shiftandshine-auto.fr",
+    "address": "6, avenue de Caniers, Bar 12",
+    "city": "Aubagne",
+    "postal_code": "13400",
+    "country": "France",
+    "category": "garage",
+    "members_benefits": "Avantage 1 : Remise de 10% sur toutes les prestations et produits de la boutique de détailing\nAvantage 2 : Pour tout achat de prestations nécessitant l'immobilisation du véhicules dans l'atelier, la recharge jusqu'à 80% sera offerte sur notre chargeur dans l'atelier.\nAvantage 3 : Organisation d'ateliers à l'initiation des produits d'entretien esthétique de notre boutique de façon régulière dédié uniquement aux TOCF.",
+    "benefits_conditions": "Présentation de la carte de membre.",
+    "latitude": "43.28682877798597",
+    "longitude": "5.59357458818972"
   }
 ]
