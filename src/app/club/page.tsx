@@ -79,7 +79,8 @@ export default function ClubPage() {
                   </div>
 
                   <div className="relative">
-                    <span className="absolute -top-4 -left-2 text-6xl text-primary/10 font-serif leading-none">"</span>
+                    <span
+                        className="absolute -top-4 -left-2 text-6xl text-primary/10 font-serif leading-none">&quot;</span>
                     <div className="space-y-4 text-text-secondary leading-relaxed relative z-10 italic">
                       {PRESIDENT_WORD.text.map((paragraph, index) => (
                         <p key={index} className={index === 0 ? "text-lg text-text-primary font-normal not-italic mb-4" : ""}>
@@ -87,7 +88,8 @@ export default function ClubPage() {
                         </p>
                       ))}
                     </div>
-                    <span className="absolute -bottom-8 -right-2 text-6xl text-primary/10 font-serif leading-none rotate-180">"</span>
+                    <span
+                        className="absolute -bottom-8 -right-2 text-6xl text-primary/10 font-serif leading-none rotate-180">&quot;</span>
                   </div>
                 </div>
               </div>
@@ -153,7 +155,8 @@ export default function ClubPage() {
           <div className="mt-16 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-text-primary mb-6 leading-tight">L'histoire d'une passion partagée</h2>
+                <h2 className="text-3xl font-bold text-text-primary mb-6 leading-tight">L&aposhistoire d&aposune passion
+                  partagée</h2>
                 <div className="w-20 h-1 bg-primary rounded-full mb-8"></div>
                 <p className="text-lg text-text-secondary leading-relaxed mb-6">
                   {CLUB_DESCRIPTION.history}
@@ -161,7 +164,9 @@ export default function ClubPage() {
               </div>
               <div className="bg-white p-8 rounded-3xl border border-border shadow-sm">
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  Notre club vous propose de partager des moments de convivialité et d'échanges lors de plus d'une <span className="text-text-primary font-bold">soixantaine d'événements</span> ou de rassemblements organisés chaque année.
+                  Notre club vous propose de partager des moments de convivialité et d&aposéchanges lors de plus
+                  d&aposune <span className="text-text-primary font-bold">soixantaine d&aposévénements</span> ou de
+                  rassemblements organisés chaque année.
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-surface rounded-2xl">
