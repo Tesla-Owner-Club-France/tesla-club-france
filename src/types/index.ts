@@ -134,3 +134,14 @@ export const SITE_CONFIG = {
     address: "305, avenue des Templiers - 13400 Aubagne - France",
   },
 } as const;
+
+// ===== CLUB TYPES =====
+
+export interface StaffMember {
+  id: string;
+  name: string;
+  role: string;
+  image?: string;
+  description?: string;
+  region?: string; // Pour les responsables régionaux
+}
