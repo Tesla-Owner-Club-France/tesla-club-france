@@ -46,11 +46,13 @@ jobs:
           APP_DIR: ${{ secrets.APP_DIR_DEV }}
           APP_PORT: 3001
           APP_IMAGE_NAME: tocf-site-dev
+          APP_ENV_NAME: "Serveur dev"
         run: |
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SERVER_USER@$SERVER_IP "
           cd $APP_DIR &&
           echo PORT_WEB=$APP_PORT > $APP_DIR/.env &&
           echo IMAGE_NAME=$APP_IMAGE_NAME >> $APP_DIR/.env &&
+          echo APP_ENV_NAME=$APP_ENV_NAME >> $APP_DIR/.env &&
           echo 'Building' && 
           docker compose -f compose-deploy.yaml build --no-cache && 
           echo 'Building done' && 

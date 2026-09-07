@@ -10,6 +10,7 @@ export function LogoText() {
     <>
         <div className="w-32">
             <img src={LOGO_PATH} alt="Partie text du logo du Tesla Owner Club France"/>
+            <p> {process.env.APP_ENV_NAME}</p>
         </div>
     </>
   );
