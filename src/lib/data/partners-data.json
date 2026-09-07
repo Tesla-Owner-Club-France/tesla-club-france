@@ -2262,5 +2262,37 @@
     "benefits_conditions": "Présentation de la carte de membre.",
     "latitude": "43.28682877798597",
     "longitude": "5.59357458818972"
+  },
+  {
+    "id": "5573b9e2-b994-4430-b771-b717ae64d656",
+    "name": "Pro Finish Detailing",
+    "logo": null,
+    "phone": "+33783033193",
+    "website": "https://www.profinishdetailing.fr/",
+    "address": "41 rue du Zornhoff",
+    "city": "Monnswiller",
+    "postal_code": "67700",
+    "country": "France",
+    "category": "garage",
+    "members_benefits": "Avantage 1 : 10% de remise sur toutes les prestations céramique / nettoyage\nAvantage 2 : Traitement surfaces vitrées offert pour tout traitement céramique complet",
+    "benefits_conditions": "présentation de la carte",
+    "latitude": "48.75049642370173",
+    "longitude": "7.381164747764777"
+  },
+  {
+    "id": "81502400-783d-4839-bcac-f5ac67a193e1",
+    "name": "ACC Garage",
+    "logo": null,
+    "phone": "+33367769362",
+    "website": "https://www.acc-shop.eu/en/content/l-atelier-by-acc-reparation-et-entretien-de-tesla-vehicules-electriques-et-hybrides",
+    "address": "4 Rue de l'Artois ZONE ACTIPOLIS 2",
+    "city": "Sausheim",
+    "postal_code": "68390",
+    "country": "France",
+    "category": "garage",
+    "members_benefits": "Avantage 1 - 10% de remise sur la main-d’oeuvre atelier\nAvantage 2 - 20% de remise sur le service climatisation\nAvantage 3 - Check-up des trains roulants avant la fin de garantie offert",
+    "benefits_conditions": "Présentation carte de membre",
+    "latitude": "47.78816914679404",
+    "longitude": "7.3868064153301995"
   }
 ]
