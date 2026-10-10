@@ -3,62 +3,165 @@ import { StaffMember } from "@/types";
 export const CLUB_STAFF: StaffMember[] = [
   {
     id: "1",
-    name: "Quentin",
+    name: "Fabien Sturni",
     role: "Président",
-    description: "Passionné par l'écosystème Tesla depuis le premier jour, Quentin veille au développement du club et à la satisfaction des membres."
+    description: "Passionné par l'écosystème Tesla depuis le premier jour, Fabien veille au développement du club et à la satisfaction des membres.",
+    image: "staff/bureau/4e0d86ac-0b69-4b93-a3c9-8cd76bbf57d2.jpg"
   },
   {
     id: "2",
-    name: "Sébastien",
+    name: "Vincent Claveau",
     role: "Vice-Président",
-    description: "Expert technique et organisateur hors pair, Sébastien est le garant de la qualité des événements et des partenariats."
+    description: "Expert technique et organisateur hors pair, Vincent est le garant de la qualité des événements et des partenariats.",
+    image: null
   },
   {
     id: "3",
-    name: "Thomas",
-    role: "Secrétaire Général",
-    description: "Thomas gère l'administration du club et s'assure que tout fonctionne de manière fluide pour nos milliers d'adhérents."
+    name: "Barbara Clavier",
+    role: "Trésorier",
+    description: "Fin stratège financier, Jean-Baptiste assure la pérennité économique du club pour financer toujours plus d'activités.",
+    image: null
   },
   {
     id: "4",
-    name: "Jean-Baptiste",
-    role: "Trésorier",
-    description: "Fin stratège financier, Jean-Baptiste assure la pérennité économique du club pour financer toujours plus d'activités."
-  }
+    name: "Olivier Poncet",
+    role: "Responsable Digital",
+    description: "Olivier gère l'administration informatique du club et s'assure que tout fonctionne de manière fluide pour nos milliers d'adhérents.",
+    image: null
+  },
+  {
+    id: "5",
+    name: "Gita Ramaswami",
+    role: "Secretaire",
+    description: ".",
+    image: null
+  },
 ];
 
 export const REGIONAL_REPS: StaffMember[] = [
   {
     id: "r1",
-    name: "Cédric",
-    role: "Responsable Régional",
-    region: "Île-de-France",
+    name: "Geraldine Quetu",
+    role: "ResponsableResponsable Régional",
+    region: "PACA",
     description: "Animateur de la communauté en région parisienne, Cédric organise les rencontres locales et accompagne les nouveaux membres."
   },
   {
     id: "r2",
-    name: "Nicolas",
+    name: "Anthony Marte",
     role: "Responsable Régional",
-    region: "Auvergne-Rhône-Alpes",
-    description: "Basé à Lyon, Nicolas fait rayonner le club dans le sud-est avec des sorties mémorables dans les Alpes."
+    region: "Haut de France",
+    description: "."
   },
   {
     id: "r3",
-    name: "Olivier",
+    name: "Delphine Garel",
     role: "Responsable Régional",
-    region: "Nouvelle-Aquitaine",
-    description: "Olivier fédère les propriétaires du sud-ouest, de Bordeaux au Pays Basque, autour de la passion Tesla."
+    region: "Auverne Rhône Alpes",
+    description: "."
   },
   {
     id: "r4",
-    name: "Marie",
+    name: "Julien Lacoulonche",
     role: "Responsable Régionale",
-    region: "Hauts-de-France",
-    description: "Dynamique et engagée, Marie anime le réseau dans le Nord et facilite les échanges transfrontaliers."
+    region: "Bretagne",
+    description: "."
+  },
+  {
+    id: "r5",
+    name: "Quentin Millardet",
+    role: "Responsable Régionale",
+    region: "Lorraine",
+    description: "."
+  },
+  {
+    id: "r6",
+    name: "Ludovic Pardigon",
+    role: "Responsable Régionale",
+    region: "Bourgogne Franche Comté",
+    description: "."
+  },
+  {
+    id: "r7",
+    name: "Laetitia Berges",
+    role: "Responsable Régionale",
+    region: "Languedoc Roussillon",
+    description: "."
+  },
+  {
+    id: "r8",
+    name: "Olivier Renault",
+    role: "Responsable Régionale",
+    region: "Nouvelle Aquitaine",
+    description: "."
+  },
+  {
+    id: "r9",
+    name: "Nicolas Dejos",
+    role: "Responsable Régionale",
+    region: "Centre Val de Loire",
+    description: "."
+  },
+  {
+    id: "r10",
+    name: "Régis Lutter",
+    role: "Responsable Régionale",
+    region: "Alsace",
+    description: "."
+  },
+  {
+    id: "r11",
+    name: "Christian Harlegand",
+    role: "Responsable Régionale",
+    region: "Île de France",
+    description: "."
+  },
+  {
+    id: "r12",
+    name: "Sebastien Bolle",
+    role: "Responsable Régionale",
+    region: "Pays de la Loire",
+    description: "."
+  },
+  {
+    id: "r13",
+    name: "Laurie Chaumont",
+    role: "Responsable Régionale",
+    region: "Normandie",
+    description: "."
+  },
+  {
+    id: "r14",
+    name: "Midi-Pyrénées",
+    role: "Responsable Régionale",
+    region: "Midi-Pyrénées",
+    description: "."
+  },
+  {
+    id: "r15",
+    name: "John Morelle",
+    role: "Responsable Régionale",
+    region: "Champagne Ardennes",
+    description: "."
+  },
+  {
+    id: "r16",
+    name: "Johnny Ferroudj",
+    role: "Responsable Régionale",
+    region: "Antilles",
+    description: "."
+  },
+  {
+    id: "r17",
+    name: "Fabien Hoareau",
+    role: "Responsable Régionale",
+    region: "Réunion",
+    description: "."
   }
 ];
 
 export const CLUB_DESCRIPTION = {
+  title: "L'histoire d'une passion partagée",
   intro: "Le Tesla Owners Club France est le seul club officiel en France reconnu par Tesla.",
   mission: "Notre mission est de rassembler les propriétaires de Tesla, de partager notre passion et de bénéficier d'avantages exclusifs auprès de partenaires sélectionnés.",
   history: "Le Tesla Owners Club France (TOCF) est une association à but non lucratif. Reconnu officiellement par Tesla, notre club est un espace d'échange, d'entraide et de convivialité pour tous les propriétaires et futurs propriétaires de la marque.",

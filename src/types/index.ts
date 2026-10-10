@@ -141,7 +141,7 @@ export interface StaffMember {
   id: string;
   name: string;
   role: string;
-  image?: string;
+  image?: string | null;
   description?: string;
   region?: string; // Pour les responsables régionaux
 }

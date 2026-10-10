@@ -3,6 +3,7 @@ import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/C
 import { CLUB_STAFF, REGIONAL_REPS, CLUB_DESCRIPTION, CLUB_MISSIONS, PRESIDENT_WORD } from "@/lib/data/club";
 import { SITE_CONFIG } from "@/types";
 import Image from "next/image";
+import {Staff} from "@/components/ui/Staff";
 
 export const metadata = {
   title: "Le Club - Tesla Owners Club France",
@@ -155,8 +156,7 @@ export default function ClubPage() {
           <div className="mt-16 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-text-primary mb-6 leading-tight">L&aposhistoire d&aposune passion
-                  partagée</h2>
+                <h2 className="text-3xl font-bold text-text-primary mb-6 leading-tight">{CLUB_DESCRIPTION.title}</h2>
                 <div className="w-20 h-1 bg-primary rounded-full mb-8"></div>
                 <p className="text-lg text-text-secondary leading-relaxed mb-6">
                   {CLUB_DESCRIPTION.history}
@@ -196,26 +196,7 @@ export default function ClubPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {CLUB_STAFF.map((member) => (
-              <Card key={member.id} className="group border-0 shadow-sm hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden bg-white">
-                <div className="aspect-[4/5] bg-slate-100 relative overflow-hidden">
-                   {/* Placeholder pour l'image du membre */}
-                   <div className="absolute inset-0 flex items-center justify-center text-5xl grayscale group-hover:grayscale-0 transition-all duration-500 bg-gradient-to-t from-black/20 to-transparent">
-                     👤
-                   </div>
-                   <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                   <div className="absolute bottom-4 left-4 right-4">
-                      <Badge className="bg-white/90 backdrop-blur-sm text-primary border-0 font-bold uppercase tracking-wider text-[10px] px-3">
-                        {member.role}
-                      </Badge>
-                   </div>
-                </div>
-                <CardContent className="p-6">
-                  <CardTitle className="mb-3 text-xl group-hover:text-primary transition-colors">{member.name}</CardTitle>
-                  <CardDescription className="line-clamp-none text-text-secondary text-sm leading-relaxed">
-                    {member.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                <Staff member={member} key={member.id}>{member}</Staff>
             ))}
           </div>
         </section>
