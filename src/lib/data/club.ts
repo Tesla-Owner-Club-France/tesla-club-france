@@ -78,7 +78,7 @@ export const REGIONAL_REPS: StaffMember[] = [
     id: "r6",
     name: "Ludovic Pardigon",
     role: "Responsable Régionale",
-    region: "Bourgogne Franche Comté",
+    region: "Bourgogne-Franche-Comté",
     description: "."
   },
   {
@@ -166,7 +166,10 @@ export const CLUB_DESCRIPTION = {
   mission: "Notre mission est de rassembler les propriétaires de Tesla, de partager notre passion et de bénéficier d'avantages exclusifs auprès de partenaires sélectionnés.",
   history: "Le Tesla Owners Club France (TOCF) est une association à but non lucratif. Reconnu officiellement par Tesla, notre club est un espace d'échange, d'entraide et de convivialité pour tous les propriétaires et futurs propriétaires de la marque.",
   vision: "Se réunir autour de notre passion et s'entraider : deux axes majeurs pour l'association. C'est dans ce sens que nous avons constitué des groupes régionaux. Ces relais locaux, proches de vous, vous permettront d'échanger les bons plans de votre territoire et de vous entraider.",
-  independence: "Le TOCF est indépendant de Tesla Motors et d'autres partenaires, et n'a aucun fondement politique. L'association est engagée contractuellement avec Tesla Inc. afin de garantir à nos membres associatifs que leurs intérêts seront protégés en toutes circonstances."
+  independence: "Le TOCF est indépendant de Tesla Motors et d'autres partenaires, et n'a aucun fondement politique. L'association est engagée contractuellement avec Tesla Inc. afin de garantir à nos membres associatifs que leurs intérêts seront protégés en toutes circonstances.",
+  highlight1: "Notre club vous propose de partager des moments de convivialité et d'échanges lors de plus d'une ",
+  highlightBold: "soixantaine d'événements",
+  highlight2: " ou de rassemblements organisés chaque année.",
 };
 
 export const CLUB_MISSIONS = [

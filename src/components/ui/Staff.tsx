@@ -7,7 +7,7 @@ import {Card, CardContent, CardDescription, CardTitle} from "@/components/ui/Car
 import {Badge} from "./Badge";
 
 interface StaffProps {
-    member: StaffMember
+    member: StaffMember,
 }
 
 export function Staff({
@@ -18,7 +18,7 @@ export function Staff({
 
     return (
         <Card key={member.id}
-              className="group border-0 shadow-sm hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden bg-white">
+              className="m-3 group border-0 shadow-sm hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden bg-white">
             <div className="aspect-[4/5] bg-slate-100 relative overflow-hidden">
                 {/* Placeholder pour l'image du membre */}
                 {member.image === null && <div
@@ -26,7 +26,7 @@ export function Staff({
                     👤
                 </div>}
                 {member.image !== null &&
-                    <img src={member.image} alt="test"/>}
+                    <img src={member.image} alt="test" className="w-full"/>}
                 <div
                     className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute bottom-4 left-4 right-4">

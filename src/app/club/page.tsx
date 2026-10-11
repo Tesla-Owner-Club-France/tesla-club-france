@@ -164,9 +164,9 @@ export default function ClubPage() {
               </div>
               <div className="bg-white p-8 rounded-3xl border border-border shadow-sm">
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  Notre club vous propose de partager des moments de convivialité et d&aposéchanges lors de plus
-                  d&aposune <span className="text-text-primary font-bold">soixantaine d&aposévénements</span> ou de
-                  rassemblements organisés chaque année.
+                  {CLUB_DESCRIPTION.highlight1}
+                  <span className="text-text-primary font-bold"> {CLUB_DESCRIPTION.highlightBold} </span>
+                  {CLUB_DESCRIPTION.highlight2}
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-surface rounded-2xl">
@@ -194,9 +194,9 @@ export default function ClubPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {CLUB_STAFF.map((member) => (
-                <Staff member={member} key={member.id}>{member}</Staff>
+                <Staff member={member} key={member.id}/>
             ))}
           </div>
         </section>
